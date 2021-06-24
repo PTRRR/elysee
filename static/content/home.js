@@ -31,7 +31,7 @@ export const home = [
     type: 'row',
     blocks: [
       {
-        color: 'hsl(322, 5%, 10%)',
+        backgroundColor: 'hsl(322, 5%, 10%)',
         title: 'smarter living',
         writer: cadeau,
       },
@@ -115,7 +115,7 @@ export const home = [
     columns: [
       {
         type: 'sticky',
-        color: 'red',
+        backgroundColor: 'red',
         img: 'img/image--32.jpg',
         text: "PHO<span style='mix-blend-mode: difference'>TO</span><br>ELY<span style='mix-blend-mode: difference'>SEE</span>",
       },

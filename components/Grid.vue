@@ -1,9 +1,10 @@
 <template lang="pug">
   .grid
     .grid__item(
-      v-for="item in items"
+      v-for="(item, index) in items"
       v-bind="item"
       :is="getItemComponent(item)"
+      :key="index"
     )
 </template>
 

@@ -21,22 +21,26 @@
         span.block__title(
           v-if="title"
           v-html="title"
+          :style="textCssStyle"
         )
 
         .block__text(
           v-if="text"
           v-html="text"
+          :style="textCssStyle"
         )
 
         writer.block__text(
           v-if="writer"
           :items="writer"
           :show="isVisible"
+          :style="textCssStyle"
         )
 
         .block__typo(
           v-if="typo"
           v-html="typo"
+          :style="textCssStyle"
         )
 
 </template>
@@ -60,6 +64,11 @@ export default Vue.extend({
     },
 
     color: {
+      type: String,
+      default: 'white',
+    },
+
+    backgroundColor: {
       type: String,
       default: 'white',
     },
@@ -94,7 +103,13 @@ export default Vue.extend({
   computed: {
     contentCssStyle(): any {
       return {
-        backgroundColor: this.color,
+        backgroundColor: this.backgroundColor,
+      }
+    },
+
+    textCssStyle(): any {
+      return {
+        color: this.color,
       }
     },
   },

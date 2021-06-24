@@ -34,7 +34,8 @@ export const expositions = [
     columns: [
       {
         type: 'sticky',
-        color: 'hsl(326, 54%, 85%)',
+        backgroundColor: 'hsl(326, 54%, 85%)',
+        color: 'white',
         text: 'A VENIR',
       },
       {
@@ -135,7 +136,7 @@ export const expositions = [
       },
       {
         type: 'sticky',
-        color: 'hsl(164, 51%, 81%)',
+        backgroundColor: 'hsl(164, 51%, 81%)',
         text: 'PASSEES',
       },
     ],

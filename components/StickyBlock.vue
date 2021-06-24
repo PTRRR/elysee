@@ -21,8 +21,9 @@
       )
         block.sticky-block__block(
           v-if="column.blocks"
-          v-for="block in column.blocks"
+          v-for="(block, index) in column.blocks"
           v-bind="block"
+          :key="index"
         )
 </template>
 
@@ -34,6 +35,7 @@ import Block from '@/components/Block.vue'
 type ColumnType = {
   type?: 'sticky'
   color?: string
+  backgroundColor?: string
   blocks?: Array<BlockType>
   img?: string
 }
@@ -63,7 +65,8 @@ export default Vue.extend({
 
     getContentCssStyle(column: ColumnType) {
       return {
-        backgroundColor: column.color,
+        backgroundColor: column.backgroundColor,
+        color: column.color,
         backgroundImage: column.img ? `url(${column.img})` : null,
       }
     },
@@ -78,7 +81,7 @@ export default Vue.extend({
   padding: 0 $main-padding;
 
   &__text {
-    color: white;
+    color: inherit;
     font-size: 5rem;
   }
 
@@ -90,6 +93,7 @@ export default Vue.extend({
   }
 
   &__content {
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;

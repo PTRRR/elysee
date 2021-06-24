@@ -154,6 +154,8 @@ export default Vue.extend({
   }
 
   &__infos {
+    line-height: 0.9;
+
     & > * {
       font-size: $main-font-size;
       margin: 0;

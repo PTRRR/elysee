@@ -1,9 +1,10 @@
 <template lang="pug">
   .row
     block.row__block(
-      v-for="block in blocks"
+      v-for="(block, index) in blocks"
       v-bind="block"
       :style="blockCssStyle"
+      :key="index"
     )
 
 </template>
