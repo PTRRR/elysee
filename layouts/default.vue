@@ -12,6 +12,9 @@ import MainMenu from '~/components/MainMenu.vue'
 
 export default Vue.extend({
   components: { MenuTopBar, MainMenu },
+  head: {
+    title: 'Elysee - Musee pour la photographie',
+  },
 })
 </script>
 
