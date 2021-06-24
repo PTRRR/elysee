@@ -95,6 +95,10 @@ export default Vue.extend({
     return {
       swiperOptions: {
         slidesPerView: 'auto',
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
       },
     }
   },
