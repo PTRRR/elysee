@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import home from '@/static/content/home.json'
+import { home } from '@/static/content/home'
 import Grid from '@/components/Grid.vue'
 
 export default Vue.extend({

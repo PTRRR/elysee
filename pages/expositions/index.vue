@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import expositions from '@/static/content/expositions.json'
+import { expositions } from '@/static/content/expositions'
 import Grid from '@/components/Grid.vue'
 
 export default Vue.extend({

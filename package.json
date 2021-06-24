@@ -23,7 +23,8 @@
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
     "swiper": "5.x",
-    "vue-awesome-swiper": "^4.1.1"
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-observe-visibility": "^1.0.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.3",

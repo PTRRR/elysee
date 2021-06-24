@@ -2,6 +2,7 @@
   .block(
     :is="link ? 'nuxt-link' : 'div'"
     :to="link"
+    v-observe-visibility="onVisibilityChange"
   )
     .block__inner
       .block__content
@@ -27,6 +28,12 @@
           v-html="text"
         )
 
+        writer.block__text(
+          v-if="writer"
+          :items="writer"
+          :show="isVisible"
+        )
+
         .block__typo(
           v-if="typo"
           v-html="typo"
@@ -36,8 +43,11 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import Writer from '@/components/Writer.vue'
 
 export default Vue.extend({
+  components: { Writer },
+
   props: {
     link: {
       type: String,
@@ -68,13 +78,30 @@ export default Vue.extend({
       type: String,
       default: '',
     },
+
+    writer: {
+      type: Array,
+      default: null,
+    },
+  },
+
+  data() {
+    return {
+      isVisible: false,
+    }
   },
 
   computed: {
-    contentCssStyle() {
+    contentCssStyle(): any {
       return {
         backgroundColor: this.color,
       }
+    },
+  },
+
+  methods: {
+    onVisibilityChange(visible: any) {
+      this.isVisible = visible
     },
   },
 })
