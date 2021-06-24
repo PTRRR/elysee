@@ -1,4 +1,4 @@
-import { photoElysee, cadeau } from './writers'
+import { photoElysee, cadeau, membre, magazine } from './writers'
 
 export const home = [
   {
@@ -17,12 +17,12 @@ export const home = [
       {
         img: 'img/image--2.jpg',
         title: 'a lire',
-        text: 'MAGA<br>ZINE',
+        writer: magazine,
         link: '/expositions',
       },
       {
         img: 'img/image--6.jpg',
-        text: 'DEVENIR<br>MEMBRE',
+        writer: membre,
         link: '/expositions',
       },
     ],
