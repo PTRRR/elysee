@@ -52,6 +52,7 @@ export default Vue.extend({
     width: 100%;
     height: 100vh;
     object-fit: cover;
+    display: block;
   }
 
   &__overlay {
