@@ -130,6 +130,7 @@ export default Vue.extend({
     color: white;
     text-align: center;
     font-size: $main-font-size;
+    line-height: 0.85;
     width: 100%;
   }
 
