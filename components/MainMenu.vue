@@ -139,7 +139,7 @@ export default Vue.extend({
   width: 100%;
   height: calc(100% - 3rem);
   z-index: 100;
-  padding: 0 #{2 * $main-padding} #{2 * $main-padding};
+  /* padding: 0 #{2 * $main-padding} #{2 * $main-padding}; */
   background-color: rgba($color: #ffffff, $alpha: 0.9);
   opacity: 0;
   pointer-events: none;
