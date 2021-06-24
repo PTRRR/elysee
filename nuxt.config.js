@@ -2,6 +2,16 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  globalName: 'elysee',
+  loading: false,
+
+  globals: {
+    id: (globalName) => `__${globalName}`,
+    nuxt: (globalName) => `$${globalName}`,
+    context: (globalName) => `__${globalName.toUpperCase()}__`,
+    pluginPrefix: (globalName) => globalName,
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'elysee',
@@ -39,5 +49,7 @@ export default {
   modules: ['@nuxtjs/style-resources'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    publicPath: '/public/',
+  },
 }
