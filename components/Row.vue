@@ -1,0 +1,55 @@
+<template lang="pug">
+  .row
+    block.row__block(
+      v-for="block in blocks"
+      v-bind="block"
+      :style="blockCssStyle"
+    )
+
+</template>
+
+<script lang="ts">
+import Vue, { PropOptions } from 'vue'
+import Block from '@/components/Block.vue'
+
+export type BlockType = {
+  img: string
+}
+
+type BlocksType = Array<BlockType>
+
+export default Vue.extend({
+  components: { Block },
+
+  props: {
+    blocks: {
+      type: Array,
+      default: () => [],
+    } as PropOptions<BlocksType>,
+  },
+
+  computed: {
+    blockCssStyle(): { width: string } {
+      return {
+        width: `${100 / this.blocks.length}%`,
+      }
+    },
+  },
+})
+</script>
+
+<style lang="scss">
+.row {
+  display: flex;
+  width: 100%;
+  padding: 0 $main-padding;
+
+  @media screen and (max-width: 800px) {
+    flex-wrap: wrap;
+
+    &__block {
+      width: 50% !important;
+    }
+  }
+}
+</style>
