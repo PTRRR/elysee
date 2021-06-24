@@ -11,6 +11,15 @@
 
     .menu-top-bar__sections
       .menu-top-bar__social
+        img(
+          src="~static/icons/instagram.png"
+        )
+        img(
+          src="~static/icons/twitter.png"
+        )
+        img(
+          src="~static/icons/facebook.png"
+        )
 
       .menu-top-bar__burger(
         @click="toggleMenu"
@@ -100,6 +109,14 @@ export default Vue.extend({
     width: 50%;
     display: flex;
     justify-content: flex-end;
+  }
+
+  &__social {
+    width: 25vh;
+    img {
+      margin-left: 1rem;
+      height: 100%;
+    }
   }
 
   &__burger {
