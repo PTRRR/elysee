@@ -24,6 +24,6 @@ export default Vue.extend({
 .home {
   display: flex;
   flex-direction: column;
-  padding: #{$main-padding + 2rem} 0 $main-padding;
+  padding: 2 * $small-font-size - $main-padding 0 $main-padding;
 }
 </style>

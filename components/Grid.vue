@@ -43,6 +43,5 @@ export default Vue.extend({
 .grid {
   display: flex;
   flex-direction: column;
-  padding: 0 $main-padding;
 }
 </style>
