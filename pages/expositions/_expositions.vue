@@ -77,21 +77,9 @@
 </template>
 
 <script lang="ts">
-import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
-import 'swiper/css/swiper.css'
-import 'swiper/swiper.scss'
 import Vue from 'vue'
 
 export default Vue.extend({
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-
-  directives: {
-    swiper: directive,
-  },
-
   data() {
     return {
       swiperOptions: {
