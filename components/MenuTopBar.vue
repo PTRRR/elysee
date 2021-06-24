@@ -113,6 +113,7 @@ export default Vue.extend({
 
   &__social {
     width: 25vh;
+    display: flex;
     img {
       margin-left: 1rem;
       height: 100%;
