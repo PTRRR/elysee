@@ -103,12 +103,14 @@ export default Vue.extend({
     showMenu(show) {
       if (show) {
         this.visibleIndex = 0
-        const interval = setInterval(() => {
-          this.visibleIndex++
-          if (this.visibleIndex === this.allItems.length) {
-            clearInterval(interval)
-          }
-        }, 50)
+        setTimeout(() => {
+          const interval = setInterval(() => {
+            this.visibleIndex++
+            if (this.visibleIndex === this.allItems.length) {
+              clearInterval(interval)
+            }
+          }, 50)
+        }, 200)
       }
     },
   },
