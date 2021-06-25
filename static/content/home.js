@@ -44,7 +44,7 @@ export const home = [
   {
     type: 'full-block',
     img: 'img/image--1.jpg',
-    text: "PHO<span style='mix-blend-mode: difference'>TO</span><br>ELY<span style='mix-blend-mode: difference'>SEE</span>",
+    text: "<span style='mix-blend-mode: difference'>PHO</span>TO<br><span style='mix-blend-mode: difference'>ELY</span>SEE",
   },
   {
     type: 'row',
@@ -117,7 +117,7 @@ export const home = [
         type: 'sticky',
         backgroundColor: 'red',
         img: 'img/image--32.jpg',
-        text: "PHO<span style='mix-blend-mode: difference'>TO</span><br>ELY<span style='mix-blend-mode: difference'>SEE</span>",
+        text: "<span style='mix-blend-mode: difference'>PHO</span>TO<br><span style='mix-blend-mode: difference'>ELY</span>SEE",
       },
       {
         blocks: [
