@@ -103,7 +103,7 @@ export default Vue.extend({
     $main-padding * 2;
 
   &__image {
-    height: calc(95vh - #{$desktop-menu-top-bar-height} - #{$main-padding});
+    height: calc(100vh - #{$desktop-menu-top-bar-height} - #{$main-padding});
     object-fit: cover;
     object-position: 50% 100%;
   }

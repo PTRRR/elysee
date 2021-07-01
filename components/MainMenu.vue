@@ -44,7 +44,7 @@ const lists = [
       },
       {
         name: 'informations',
-        link: '/expositions',
+        link: '/infos',
       },
     ],
   },
