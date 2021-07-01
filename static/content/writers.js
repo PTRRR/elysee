@@ -189,6 +189,68 @@ export const magazine = [
   },
 ]
 
+export const infos = [
+  {
+    type: 'span',
+    html: 'I',
+  },
+  {
+    type: 'span',
+    html: 'N',
+  },
+  {
+    type: 'span',
+    html: 'F',
+  },
+  {
+    type: 'span',
+    html: 'O',
+  },
+  {
+    type: 'span',
+    html: 'S',
+  },
+  {
+    type: 'br',
+  },
+  {
+    type: 'span',
+    html: 'P',
+  },
+  {
+    type: 'span',
+    html: 'R',
+  },
+  {
+    type: 'span',
+    html: 'A',
+  },
+  {
+    type: 'span',
+    html: 'T',
+  },
+  {
+    type: 'span',
+    html: 'I',
+  },
+  {
+    type: 'span',
+    html: 'Q',
+  },
+  {
+    type: 'span',
+    html: 'U',
+  },
+  {
+    type: 'span',
+    html: 'E',
+  },
+  {
+    type: 'span',
+    html: 'S',
+  },
+]
+
 export const membre = [
   {
     type: 'span',

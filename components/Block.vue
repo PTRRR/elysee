@@ -50,7 +50,6 @@
         span.block__credits(
           v-if="credits"
           v-html="credits"
-          :style="textCssStyle"
         )
 
 </template>
@@ -211,7 +210,6 @@ export default Vue.extend({
     left: 50%;
     color: white;
     text-align: center;
-    transform: translate(-50%, 0%);
     font-size: $small-font-size;
     width: 100%;
     padding: $small-font-size;
@@ -220,11 +218,14 @@ export default Vue.extend({
 
   &__title {
     top: 0;
+    transform: translate(-50%, 0%);
   }
 
   &__credits {
+    color: black;
     opacity: 0;
-    bottom: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
     transition: opacity 0.3s ease-in-out;
 
     #{$b}--show-credits & {
@@ -256,7 +257,11 @@ export default Vue.extend({
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  &--show-credits img {
+    opacity: 0.15;
   }
 
   &:hover {

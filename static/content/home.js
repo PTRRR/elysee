@@ -1,4 +1,4 @@
-import { cadeau, membre, magazine } from './writers'
+import { cadeau, membre, magazine, infos } from './writers'
 
 export const home = [
   {
@@ -18,11 +18,13 @@ export const home = [
       },
       {
         img: 'img/image--2.jpg',
-        credits: 'Saul Leiter - Postmen',
+        credits: 'Saul Leiter, Postmen, 1952',
+        link: '/infos',
+        writer: infos,
       },
       {
         img: 'img/image--6.jpg',
-        credits: 'Nicolas Faure - A9',
+        credits: 'Nicolas Faure, A9, 1997',
       },
     ],
   },

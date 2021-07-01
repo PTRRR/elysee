@@ -33,6 +33,15 @@ export default Vue.extend({
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
+  margin: 0;
+}
+
 html,
 body {
   font-family: PhotoC, Helvetica, Arial, sans-serif;
