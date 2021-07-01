@@ -1,13 +1,12 @@
 <template lang="pug">
   span.writer
-    client-only
-      component(
-        v-for="(item, index) in items"
-        :key="index"
-        :is="item.type"
-        v-html="item.html"
-        v-show="index < visibleIndex"
-      )
+    component(
+      v-for="(item, index) in items"
+      :key="index"
+      :is="item.type"
+      v-html="item.html"
+      v-show="index < visibleIndex"
+    )
     noscript
       component(
         v-for="(item, index) in items"
