@@ -1,12 +1,14 @@
 <template lang="pug">
   span.writer
-    component(
-      v-for="(item, index) in items"
-      :key="index"
-      :is="item.type"
-      v-html="item.html"
-      v-show="index < visibleIndex"
-    )
+    client-only
+      component(
+        v-for="(item, index) in items"
+        :key="index"
+        :is="item.type"
+        v-html="item.html"
+        v-show="index < visibleIndex"
+      )
+    noscript(v-html="noScriptText")
 </template>
 
 <script lang="ts">
@@ -29,6 +31,21 @@ export default Vue.extend({
       visibleIndex: 0,
       interval: null,
     } as { visibleIndex: number; interval: any }
+  },
+
+  computed: {
+    noScriptText(): any {
+      return this.items
+        .map((it: any) => {
+          const { type, html } = it
+          if (type === 'br') {
+            return '<br>'
+          } else {
+            return `<${type}>${html}</${type}>`
+          }
+        })
+        .join('')
+    },
   },
 
   watch: {
