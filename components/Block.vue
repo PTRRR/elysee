@@ -33,7 +33,6 @@
           :class="getTextCssClasses(text)"
         )
 
-
         writer.block__text(
           v-if="writer"
           :items="writer"
