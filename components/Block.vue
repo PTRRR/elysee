@@ -249,7 +249,7 @@ export default Vue.extend({
   &__typo {
     font-size: $big-font-size;
     line-height: 0.8;
-    margin-bottom: -5rem;
+    margin-bottom: -1.22em;
   }
 
   img {
