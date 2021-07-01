@@ -92,6 +92,10 @@ export const exposition = [
     type: 'span',
     html: 'N',
   },
+  {
+    type: 'span',
+    html: 'S',
+  },
 ]
 
 export const cadeau = [

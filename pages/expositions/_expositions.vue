@@ -48,9 +48,7 @@
     .exposition__columns
       .exposition__infos
         h1
-          span EXPO
-          br
-          span SITION
+          span EXPOSITION
 
         br
         br
