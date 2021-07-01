@@ -30,6 +30,7 @@
           v-if="text"
           v-html="text"
           :style="textCssStyle"
+          :class="getTextCssClasses(text)"
         )
 
         writer.block__text(
@@ -37,6 +38,7 @@
           :items="writer"
           :show="isVisible"
           :style="textCssStyle"
+          :class="getTextCssClasses(writer)"
         )
 
         .block__typo(
@@ -111,6 +113,7 @@ export default Vue.extend({
     return {
       isVisible: false,
       showCredits: false,
+      mounted: false,
     }
   },
 
@@ -134,6 +137,10 @@ export default Vue.extend({
     },
   },
 
+  mounted() {
+    this.mounted = true
+  },
+
   methods: {
     onVisibilityChange(visible: any) {
       this.isVisible = visible
@@ -141,6 +148,25 @@ export default Vue.extend({
 
     onClick() {
       this.showCredits = !this.showCredits
+    },
+
+    getTextCssClasses(text: any) {
+      if (this.mounted) {
+        const type = typeof text
+        let innerHTML = ''
+        if (type === 'object') {
+          innerHTML = text.map((it: any) => it.html).join('')
+        }
+
+        const element = document.createElement('span')
+        element.innerHTML = innerHTML
+
+        return {
+          'block--long-text': element.innerText.length > 15,
+        }
+      } else {
+        return {}
+      }
     },
   },
 })
@@ -242,6 +268,12 @@ export default Vue.extend({
   @media screen and (max-width: $tablet-breakpoint) {
     &__title,
     &__credits {
+      font-size: $mobile-menu-font-size;
+    }
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    &--long-text {
       font-size: $mobile-menu-font-size;
     }
   }
