@@ -189,6 +189,29 @@ export const magazine = [
   },
 ]
 
+export const liste = [
+  {
+    type: 'span',
+    html: 'L',
+  },
+  {
+    type: 'span',
+    html: 'I',
+  },
+  {
+    type: 'span',
+    html: 'S',
+  },
+  {
+    type: 'span',
+    html: 'T',
+  },
+  {
+    type: 'span',
+    html: 'E',
+  },
+]
+
 export const infos = [
   {
     type: 'span',

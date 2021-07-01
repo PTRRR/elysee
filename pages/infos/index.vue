@@ -111,10 +111,10 @@ export default Vue.extend({
 
   &__row {
     display: flex;
-    padding: 2.5em 0;
+    padding: 1.5em 0;
 
     #{$i}__row {
-      padding: 1.5em 0;
+      padding: 1em 0;
     }
 
     & > * {

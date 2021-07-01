@@ -1,4 +1,4 @@
-import { exposition } from './writers'
+import { exposition, liste } from './writers'
 export const expositions = [
   {
     type: 'row',
@@ -11,9 +11,8 @@ export const expositions = [
       },
       {
         img: '/img/image--35.jpg',
-        writer: exposition,
-        link: '/expositions/template',
-        title: '01.01.2022',
+        writer: liste,
+        link: '/expositions/liste',
       },
       {
         img: '/img/image--36.jpg',
@@ -23,9 +22,8 @@ export const expositions = [
       },
       {
         img: '/img/image--37.jpg',
-        writer: exposition,
-        link: '/expositions/template',
-        title: '01.01.2022',
+        writer: liste,
+        link: '/expositions/liste',
       },
     ],
   },
