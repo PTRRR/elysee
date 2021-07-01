@@ -160,6 +160,12 @@ export default Vue.extend({
   }
 
   @media screen and (max-width: $mobile-breakpoint) {
+    &__image {
+      height: calc(50vh - #{$desktop-menu-top-bar-height} - #{$main-padding});
+      object-fit: cover;
+      object-position: 50% 100%;
+    }
+
     &__title {
       margin-bottom: 0.6em;
     }
