@@ -96,6 +96,14 @@ export default Vue.extend({
 .exposition {
   padding: 2 * $small-font-size $main-padding * 2;
 
+  padding: calc(#{$desktop-menu-top-bar-height} - #{$main-padding})
+    $main-padding * 2;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: calc(#{$mobile-menu-top-bar-height} - #{$main-padding})
+      $main-padding * 2;
+  }
+
   &__slider {
     height: 60vh;
   }

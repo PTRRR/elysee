@@ -18,11 +18,11 @@ export const home = [
       },
       {
         img: 'img/image--2.jpg',
-        link: '/expositions',
+        credits: 'Saul Leiter - Postmen',
       },
       {
         img: 'img/image--6.jpg',
-        link: '/expositions',
+        credits: 'Nicolas Faure - A9',
       },
     ],
   },

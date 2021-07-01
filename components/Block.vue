@@ -2,6 +2,8 @@
   .block(
     :is="link ? 'nuxt-link' : 'div'"
     :to="link"
+    :class="blockCssClasses"
+    @click="onClick"
     v-observe-visibility="onVisibilityChange"
   )
     .block__inner
@@ -40,6 +42,12 @@
         .block__typo(
           v-if="typo"
           v-html="typo"
+          :style="textCssStyle"
+        )
+
+        span.block__credits(
+          v-if="credits"
+          v-html="credits"
           :style="textCssStyle"
         )
 
@@ -83,6 +91,11 @@ export default Vue.extend({
       default: '',
     },
 
+    credits: {
+      type: String,
+      default: '',
+    },
+
     typo: {
       type: String,
       default: '',
@@ -97,10 +110,17 @@ export default Vue.extend({
   data() {
     return {
       isVisible: false,
+      showCredits: false,
     }
   },
 
   computed: {
+    blockCssClasses(): any {
+      return {
+        'block--show-credits': this.showCredits,
+      }
+    },
+
     contentCssStyle(): any {
       return {
         backgroundColor: this.backgroundColor,
@@ -117,6 +137,10 @@ export default Vue.extend({
   methods: {
     onVisibilityChange(visible: any) {
       this.isVisible = visible
+    },
+
+    onClick() {
+      this.showCredits = !this.showCredits
     },
   },
 })
@@ -155,9 +179,9 @@ export default Vue.extend({
     overflow: hidden;
   }
 
-  &__title {
+  &__title,
+  &__credits {
     position: absolute;
-    top: 0;
     left: 50%;
     color: white;
     text-align: center;
@@ -166,6 +190,20 @@ export default Vue.extend({
     width: 100%;
     padding: $small-font-size;
     text-transform: uppercase;
+  }
+
+  &__title {
+    top: 0;
+  }
+
+  &__credits {
+    opacity: 0;
+    bottom: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    #{$b}--show-credits & {
+      opacity: 1;
+    }
   }
 
   &__text,
@@ -194,6 +232,13 @@ export default Vue.extend({
   &:hover {
     img {
       transform: scale(1.1);
+    }
+  }
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    &__title,
+    &__credits {
+      font-size: $small-font-size * 2;
     }
   }
 }

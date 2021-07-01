@@ -86,7 +86,7 @@ export default Vue.extend({
   }
 
   &__column-sticky {
-    height: calc(100vh - 1rem);
+    height: calc(100vh - #{$main-padding * 2});
     position: sticky;
     top: $main-padding;
     padding: $main-padding;

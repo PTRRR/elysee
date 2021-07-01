@@ -24,6 +24,12 @@ export default Vue.extend({
 .home {
   display: flex;
   flex-direction: column;
-  padding: 2 * $small-font-size - $main-padding 0 $main-padding;
+  padding: calc(#{$desktop-menu-top-bar-height} - #{$main-padding}) 0
+    $main-padding;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: calc(#{$mobile-menu-top-bar-height} - #{$main-padding}) 0
+      $main-padding;
+  }
 }
 </style>

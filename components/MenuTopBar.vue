@@ -6,8 +6,8 @@
       to="/"
       @click.native="hideMenu"
     )
-      span PHOTO ELYSEE
-      span MUSEE POUR LA PHOTOGRAPHIE
+      span PHOTO <br> ELYSEE
+      span MUSEE POUR <br> LA PHOTOGRAPHIE
 
     .menu-top-bar__sections
       .menu-top-bar__social
@@ -71,7 +71,7 @@ export default Vue.extend({
 
 <style lang="scss">
 .menu-top-bar {
-  padding: 1rem;
+  padding: 0 $main-padding * 2;
   display: flex;
   position: fixed;
   top: 0;
@@ -79,10 +79,11 @@ export default Vue.extend({
   width: 100%;
   z-index: 100;
   background-color: white;
-  height: 2 * $small-font-size;
+  height: $desktop-menu-top-bar-height;
   line-height: 1;
   transition: transform 0.3s ease-in-out;
-  font-size: $small-font-size;
+  font-size: $desktop-font-size;
+  align-items: center;
 
   &--hide {
     transform: translate(0, -100%);
@@ -93,15 +94,21 @@ export default Vue.extend({
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 0 0 auto;
 
     span {
       display: block;
       width: 50%;
-      margin-bottom: -0.4rem;
+      margin-bottom: -0.4em;
+      white-space: nowrap;
+
+      br {
+        display: none;
+      }
     }
 
     span + span {
-      padding-left: 0.2rem;
+      padding-left: 0.2em;
     }
   }
 
@@ -114,16 +121,17 @@ export default Vue.extend({
   &__social {
     width: 25vh;
     display: flex;
+
     img {
-      margin-left: 1rem;
-      height: 100%;
+      margin-left: 1em;
+      height: 1em;
     }
   }
 
   &__burger {
     cursor: pointer;
-    width: 1.2rem;
-    height: 1rem;
+    width: 1.2em;
+    height: 1em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -133,6 +141,32 @@ export default Vue.extend({
     width: 100%;
     height: 2px;
     background-color: black;
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    height: $mobile-menu-top-bar-height;
+    font-size: $mobile-font-size * 2;
+
+    &__home {
+      span {
+        br {
+          display: block;
+        }
+      }
+    }
+
+    &__burger {
+      cursor: pointer;
+      width: 2em;
+      height: 1.85em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__social {
+      display: none;
+    }
   }
 }
 </style>

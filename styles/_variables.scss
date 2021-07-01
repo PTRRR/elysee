@@ -1,4 +1,10 @@
-$main-padding: 0.5rem;
-$big-font-size: 25rem;
-$main-font-size: 5rem;
-$small-font-size: 1.5rem;
+$desktop-font-size: 20px;
+$mobile-font-size: 10px;
+$main-padding: 0.25rem;
+$big-font-size: 25vw;
+$main-font-size: 3.5em;
+$small-font-size: 1em;
+$desktop-menu-top-bar-height: $desktop-font-size * 2;
+$mobile-menu-top-bar-height: $mobile-font-size * 2 * 3;
+$tablet-breakpoint: 1400px;
+$mobile-breakpoint: 800px;

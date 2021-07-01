@@ -37,7 +37,7 @@ html,
 body {
   font-family: PhotoC, Helvetica, Arial, sans-serif;
   margin: 0;
-  font-size: 14px;
+  font-size: $desktop-font-size;
 }
 
 a {
@@ -45,17 +45,17 @@ a {
   text-decoration: inherit;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: $tablet-breakpoint) {
   html,
   body {
-    font-size: 10px;
+    font-size: $mobile-font-size;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: $mobile-breakpoint) {
   html,
   body {
-    font-size: 7px;
+    font-size: 10px;
   }
 }
 </style>

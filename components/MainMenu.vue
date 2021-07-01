@@ -27,7 +27,7 @@ const lists = [
     class: 'menu__main-sections',
     items: [
       {
-        name: 'exposition',
+        name: 'expositions',
         link: '/expositions',
       },
       {
@@ -134,10 +134,10 @@ export default Vue.extend({
 <style lang="scss">
 .menu {
   position: fixed;
-  top: 3rem;
+  top: $desktop-menu-top-bar-height;
   left: 0;
   width: 100%;
-  height: calc(100% - 3rem);
+  height: calc(100% - #{$desktop-menu-top-bar-height});
   z-index: 100;
   /* padding: 0 #{2 * $main-padding} #{2 * $main-padding}; */
   background-color: rgba($color: #ffffff, $alpha: 0.9);
@@ -172,6 +172,18 @@ export default Vue.extend({
 
   &__secondary-sections {
     font-size: $small-font-size;
+  }
+
+  @media screen and (max-width: $tablet-breakpoint) {
+    &__secondary-sections {
+      font-size: $mobile-font-size * 2;
+    }
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    font-size: $mobile-font-size;
+    top: $mobile-menu-top-bar-height;
+    height: calc(100% - #{$mobile-menu-top-bar-height});
   }
 }
 </style>

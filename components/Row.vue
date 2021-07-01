@@ -45,7 +45,7 @@ export default Vue.extend({
   width: 100%;
   padding: 0 $main-padding;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: $mobile-breakpoint) {
     flex-wrap: wrap;
 
     &__block {
