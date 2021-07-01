@@ -124,6 +124,7 @@ export default Vue.extend({
 
 <style lang="scss">
 .block {
+  $b: &;
   overflow: hidden;
 
   &__inner {
@@ -151,6 +152,7 @@ export default Vue.extend({
     left: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
   }
 
   &__title {
@@ -186,6 +188,13 @@ export default Vue.extend({
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
   }
 }
 </style>

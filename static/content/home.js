@@ -1,4 +1,4 @@
-import { photoElysee, cadeau, membre, magazine } from './writers'
+import { cadeau, membre, magazine } from './writers'
 
 export const home = [
   {
@@ -8,21 +8,20 @@ export const home = [
         img: 'img/image--3.jpg',
         // text: "PHO<span style='mix-blend-mode: difference'>TO</span><br>ELY<span style='mix-blend-mode: difference'>SEE</span>",
         link: '/expositions',
-        writer: photoElysee,
+        title: 'a lire',
+        writer: magazine,
       },
       {
         img: 'img/image--0.jpg',
         link: '/expositions',
+        writer: membre,
       },
       {
         img: 'img/image--2.jpg',
-        title: 'a lire',
-        writer: magazine,
         link: '/expositions',
       },
       {
         img: 'img/image--6.jpg',
-        writer: membre,
         link: '/expositions',
       },
     ],
