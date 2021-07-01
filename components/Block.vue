@@ -33,13 +33,14 @@
           :class="getTextCssClasses(text)"
         )
 
-        writer.block__text(
-          v-if="writer"
-          :items="writer"
-          :show="isVisible"
-          :style="textCssStyle"
-          :class="getTextCssClasses(writer)"
-        )
+        client-only
+          writer.block__text(
+            v-if="writer"
+            :items="writer"
+            :show="isVisible"
+            :style="textCssStyle"
+            :class="getTextCssClasses(writer)"
+          )
 
         .block__typo(
           v-if="typo"
