@@ -26,9 +26,11 @@
         .infos__row
           .infos__column
             h5 TARIF NORMAL
+            br
             p 15 CHF
           .infos__column
             h5 TARIF RÉDUIT
+            br
             p 10 CHF
             br
             p Apprentis
@@ -94,6 +96,7 @@ export default Vue.extend({
 
 <style lang="scss">
 .infos {
+  $i: &;
   display: flex;
   flex-direction: column;
   padding: calc(#{$desktop-menu-top-bar-height} - #{$main-padding})
@@ -107,7 +110,11 @@ export default Vue.extend({
 
   &__row {
     display: flex;
-    padding: 3em 0;
+    padding: 2.5em 0;
+
+    #{$i}__row {
+      padding: 1.5em 0;
+    }
 
     & > * {
       width: 50%;
@@ -115,6 +122,10 @@ export default Vue.extend({
 
     & + & {
       border-top: solid 0.2em black;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
     }
   }
 
