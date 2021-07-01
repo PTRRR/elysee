@@ -41,6 +41,7 @@
         .infos__row
           .infos__column
             h5 ENTRÉE GRATUITE
+            br
             p Membre des Amis
             br
             p Jeunes, jusqu’à 18 ans et étudiants
@@ -121,7 +122,7 @@ export default Vue.extend({
     }
 
     & + & {
-      border-top: solid 0.2em black;
+      border-top: solid 0.15em black;
     }
 
     &:last-child {
