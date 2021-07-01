@@ -1,10 +1,11 @@
 $desktop-font-size: 20px;
 $mobile-font-size: 10px;
+$mobile-menu-font-size: $mobile-font-size * 1.5;
 $main-padding: 0.25rem;
 $big-font-size: 25vw;
 $main-font-size: 3.5em;
 $small-font-size: 1em;
 $desktop-menu-top-bar-height: $desktop-font-size * 2;
-$mobile-menu-top-bar-height: $mobile-font-size * 2 * 3;
+$mobile-menu-top-bar-height: $mobile-menu-font-size * 3;
 $tablet-breakpoint: 1400px;
 $mobile-breakpoint: 800px;

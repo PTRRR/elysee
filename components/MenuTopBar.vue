@@ -34,14 +34,8 @@ import Vue from 'vue'
 import { mapGetters } from 'vuex'
 
 export default Vue.extend({
-  data() {
-    return {
-      showTopBar: true,
-    }
-  },
-
   computed: {
-    ...mapGetters(['showMenu']),
+    ...mapGetters(['showMenu', 'showTopBar']),
     menuTopBarCssClasses(): any {
       return {
         'menu-top-bar--hide': !this.showTopBar && !this.showMenu,
@@ -52,7 +46,10 @@ export default Vue.extend({
   mounted() {
     let lastScrollY = 0
     window.addEventListener('scroll', () => {
-      this.showTopBar = window.scrollY < 100 || lastScrollY - window.scrollY > 0
+      this.$store.commit(
+        'setShowTopBar',
+        window.scrollY < 100 || lastScrollY - window.scrollY > 0
+      )
       lastScrollY = window.scrollY
     })
   },
@@ -145,7 +142,7 @@ export default Vue.extend({
 
   @media screen and (max-width: $mobile-breakpoint) {
     height: $mobile-menu-top-bar-height;
-    font-size: $mobile-font-size * 2;
+    font-size: $mobile-menu-font-size;
 
     &__home {
       span {

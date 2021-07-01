@@ -155,5 +155,21 @@ export default Vue.extend({
       margin: 0;
     }
   }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    &__columns {
+      flex-direction: column;
+    }
+
+    &__infos,
+    &__text {
+      width: 100%;
+      padding-top: 2rem;
+    }
+
+    &__text {
+      font-size: $mobile-menu-font-size;
+    }
+  }
 }
 </style>

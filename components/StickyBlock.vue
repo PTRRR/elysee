@@ -1,5 +1,7 @@
 <template lang="pug">
-  .sticky-block
+  .sticky-block(
+    :class="styckyBlockCssClasses"
+  )
     .sticky-block__column(
       v-for="column of columns"
       :class="getColumnCssClasses(column)"
@@ -31,6 +33,7 @@
 import Vue, { PropOptions } from 'vue'
 import { BlockType } from '@/components/Row.vue'
 import Block from '@/components/Block.vue'
+import { mapGetters } from 'vuex'
 
 type ColumnType = {
   type?: 'sticky'
@@ -48,6 +51,15 @@ export default Vue.extend({
       type: Array,
       default: () => [],
     } as PropOptions<Array<ColumnType>>,
+  },
+
+  computed: {
+    ...mapGetters(['showTopBar']),
+    styckyBlockCssClasses() {
+      return {
+        'sticky-block--top-bar': this.showTopBar,
+      }
+    },
   },
 
   methods: {
@@ -76,13 +88,17 @@ export default Vue.extend({
 
 <style lang="scss">
 .sticky-block {
+  $s: &;
   width: 100%;
   display: flex;
   padding: 0 $main-padding;
 
   &__text {
     color: inherit;
-    font-size: 5rem;
+    font-size: $main-font-size;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
   }
 
   &__column-sticky {
@@ -90,6 +106,8 @@ export default Vue.extend({
     position: sticky;
     top: $main-padding;
     padding: $main-padding;
+    overflow: hidden;
+    text-align: center;
   }
 
   &__content {
@@ -102,6 +120,32 @@ export default Vue.extend({
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    flex-direction: column;
+
+    &__column {
+      width: 100% !important;
+    }
+
+    &__column-sticky {
+      z-index: 10;
+      height: 25vw;
+      position: sticky;
+      top: 0;
+      padding: $main-padding * 2 $main-padding;
+      margin: -$main-padding 0;
+      background-color: white;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      transition: top 0.3s ease-in-out;
+
+      #{$s}--top-bar & {
+        top: $mobile-menu-top-bar-height;
+      }
+    }
   }
 }
 </style>

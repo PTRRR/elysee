@@ -214,6 +214,10 @@ export default Vue.extend({
     font-size: $main-font-size;
     line-height: 0.85;
     width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 1em 0;
+    margin: -1em 0;
   }
 
   &__typo {
@@ -238,7 +242,7 @@ export default Vue.extend({
   @media screen and (max-width: $tablet-breakpoint) {
     &__title,
     &__credits {
-      font-size: $small-font-size * 2;
+      font-size: $mobile-menu-font-size;
     }
   }
 }

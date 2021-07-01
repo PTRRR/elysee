@@ -176,7 +176,7 @@ export default Vue.extend({
 
   @media screen and (max-width: $tablet-breakpoint) {
     &__secondary-sections {
-      font-size: $mobile-font-size * 2;
+      font-size: $mobile-menu-font-size;
     }
   }
 
