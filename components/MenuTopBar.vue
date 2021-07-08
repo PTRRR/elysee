@@ -78,7 +78,7 @@ export default Vue.extend({
   background-color: white;
   height: $desktop-menu-top-bar-height;
   line-height: 1;
-  transition: transform 0.3s ease-in-out;
+  transition: transform $transition-duration $easing;
   font-size: $desktop-font-size;
   align-items: center;
 

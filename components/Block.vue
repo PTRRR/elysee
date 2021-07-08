@@ -226,7 +226,7 @@ export default Vue.extend({
     opacity: 0;
     top: 50%;
     transform: translate(-50%, -50%);
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity $transition-duration $easing;
 
     #{$b}--show-credits & {
       opacity: 1;
@@ -257,7 +257,8 @@ export default Vue.extend({
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: opacity $transition-duration $easing,
+      transform $transition-duration $easing;
   }
 
   &--show-credits img {

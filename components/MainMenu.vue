@@ -143,7 +143,7 @@ export default Vue.extend({
   background-color: rgba($color: #ffffff, $alpha: 0.9);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s $easing;
 
   &--show {
     opacity: 1;

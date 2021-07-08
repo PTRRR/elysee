@@ -7,42 +7,52 @@
       swiper-slide.exposition__slide
         img(
           src="~static/img/image--0.jpg"
+          @click="showImageOverlay('image--0.jpg')"
         )
       swiper-slide.exposition__slide
         img(
           src="~static/img/image--1.jpg"
+          @click="showImageOverlay('image--1.jpg')"
         )
       swiper-slide.exposition__slide
         img(
           src="~static/img/image--2.jpg"
+          @click="showImageOverlay('image--2.jpg')"
         )
       swiper-slide.exposition__slide
         img(
           src="~static/img/image--3.jpg"
+          @click="showImageOverlay('image--3.jpg')"
         )
       swiper-slide.exposition__slide
         img(
           src="~static/img/image--4.jpg"
+          @click="showImageOverlay('image--4.jpg')"
         )
       swiper-slide.exposition__slide
         img(
           src="~static/img/image--5.jpg"
+          @click="showImageOverlay('image--5.jpg')"
         )
       swiper-slide.exposition__slide
         img(
           src="~static/img/image--6.jpg"
+          @click="showImageOverlay('image--6.jpg')"
         )
       swiper-slide.exposition__slide
         img(
           src="~static/img/image--7.jpg"
+          @click="showImageOverlay('image--7.jpg')"
         )
       swiper-slide.exposition__slide
         img(
           src="~static/img/image--8.jpg"
+          @click="showImageOverlay('image--8.jpg')"
         )
       swiper-slide.exposition__slide
         img(
           src="~static/img/image--9.jpg"
+          @click="showImageOverlay('image--9.jpg')"
         )
 
     .exposition__columns
@@ -89,6 +99,13 @@ export default Vue.extend({
       },
     }
   },
+
+  methods: {
+    showImageOverlay(source: string) {
+      this.$store.commit('setImageOverlay', source)
+      this.$store.commit('setShowImageOverlay', true)
+    },
+  },
 })
 </script>
 
@@ -106,15 +123,16 @@ export default Vue.extend({
 
   &__slider {
     height: 60vh;
+    margin: 0 -2 * $main-padding;
   }
 
   &__slide {
     height: 100%;
     width: min-content;
-    padding-right: 2 * $main-padding;
+    padding-left: 2 * $main-padding;
 
     &:last-child {
-      padding: 0;
+      padding-right: 2 * $main-padding;
     }
 
     img {

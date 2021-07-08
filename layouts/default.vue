@@ -2,16 +2,18 @@
   .app
     menu-top-bar
     main-menu
+    image-overlay
     nuxt
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import MenuTopBar from '~/components/MenuTopBar.vue'
-import MainMenu from '~/components/MainMenu.vue'
+import ImageOverlay from '@/components/ImageOverlay.vue'
+import MenuTopBar from '@/components/MenuTopBar.vue'
+import MainMenu from '@/components/MainMenu.vue'
 
 export default Vue.extend({
-  components: { MenuTopBar, MainMenu },
+  components: { MenuTopBar, MainMenu, ImageOverlay },
   head: {
     title: 'Elysee - Musee pour la photographie',
   },

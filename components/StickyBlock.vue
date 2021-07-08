@@ -140,7 +140,7 @@ export default Vue.extend({
       overflow: hidden;
       display: flex;
       justify-content: center;
-      transition: top 0.3s ease-in-out;
+      transition: top $transition-duration $easing;
 
       #{$s}--top-bar & {
         top: $mobile-menu-top-bar-height;
