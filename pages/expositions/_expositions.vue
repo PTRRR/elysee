@@ -102,7 +102,7 @@ export default Vue.extend({
 
   methods: {
     showImageOverlay(source: string) {
-      this.$store.commit('setImageOverlay', source)
+      this.$store.commit('setImageOverlay', `/img/${source}`)
       this.$store.commit('setShowImageOverlay', true)
     },
   },
@@ -138,6 +138,7 @@ export default Vue.extend({
     img {
       height: 100%;
       width: auto;
+      cursor: pointer;
     }
   }
 

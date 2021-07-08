@@ -146,7 +146,14 @@ export default Vue.extend({
     },
 
     onClick() {
-      this.showCredits = !this.showCredits
+      // TODO: Choose between those two behaviour
+
+      // Credits
+      // this.showCredits = !this.showCredits
+
+      // Fulscreen image + credits
+      this.$store.commit('setShowImageOverlay', true)
+      this.$store.commit('setImageOverlay', this.img)
     },
 
     getTextCssClasses(text: any) {
