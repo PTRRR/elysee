@@ -92,6 +92,10 @@ export default Vue.extend({
     return {
       swiperOptions: {
         slidesPerView: 'auto',
+        freeMode: true,
+        mousewheel: {
+          forceToAxis: true,
+        },
         autoplay: {
           delay: 3000,
           disableOnInteraction: false,
