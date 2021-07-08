@@ -1,6 +1,7 @@
 <template lang="pug">
   nav.menu-top-bar(
     :class="menuTopBarCssClasses"
+    @click="hideImageOverlay"
   )
     nuxt-link.menu-top-bar__home(
       to="/"
@@ -61,6 +62,10 @@ export default Vue.extend({
 
     hideMenu() {
       this.$store.commit('setShowMenu', false)
+    },
+
+    hideImageOverlay() {
+      this.$store.commit('setShowImageOverlay', false)
     },
   },
 })
