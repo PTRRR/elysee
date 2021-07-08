@@ -156,6 +156,12 @@ export default Vue.extend({
     }
   }
 
+  @media screen and (max-width: $tablet-breakpoint) {
+    &__text {
+      font-size: $desktop-font-size;
+    }
+  }
+
   @media screen and (max-width: $mobile-breakpoint) {
     &__columns {
       flex-direction: column;
