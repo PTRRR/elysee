@@ -1,33 +1,27 @@
 <template lang="pug">
-  nav.menu-top-bar(
-    :class="menuTopBarCssClasses"
-    @click="hideImageOverlay"
-  )
-    nuxt-link.menu-top-bar__home(
-      to="/"
-      @click.native="hideMenu"
-    )
-      span PHOTO <br> ELYSEE
-      span MUSEE POUR <br> LA PHOTOGRAPHIE
+nav.menu-top-bar(
+	:class="menuTopBarCssClasses"
+	@click="hideImageOverlay"
+)
+	nuxt-link.menu-top-bar__home(
+		to="/"
+		@click.native="hideMenu"
+	)
+		span PHOTO <br> ELYSEE
+		span {{this.header_title}}
 
-    .menu-top-bar__sections
-      .menu-top-bar__social
-        img(
-          src="~static/icons/instagram.png"
-        )
-        img(
-          src="~static/icons/twitter.png"
-        )
-        img(
-          src="~static/icons/facebook.png"
-        )
+	.menu-top-bar__sections
+		nuxt-link.opening(
+			to="/infos"
+		)
+			span Ouvert de 8h à 19h
 
-      .menu-top-bar__burger(
-        @click="toggleMenu"
-      )
-        .menu-top-bar__line
-        .menu-top-bar__line
-        .menu-top-bar__line
+		.menu-top-bar__burger(
+			@click="toggleMenu"
+		)
+			.menu-top-bar__line
+			.menu-top-bar__line
+			.menu-top-bar__line
 </template>
 
 <script lang="ts">
@@ -35,6 +29,12 @@ import Vue from 'vue'
 import { mapGetters } from 'vuex'
 
 export default Vue.extend({
+  data() {
+    return {
+      header_title: 'Musée pour la photographie',
+    }
+  },
+
   computed: {
     ...mapGetters(['showMenu', 'showTopBar']),
     menuTopBarCssClasses(): any {
@@ -44,7 +44,16 @@ export default Vue.extend({
     },
   },
 
+  watch: {
+    $route() {
+      // on route change
+      this.updateTitle()
+    },
+  },
+
   mounted() {
+    this.updateTitle()
+
     let lastScrollY = 0
     window.addEventListener('scroll', () => {
       this.$store.commit(
@@ -56,6 +65,13 @@ export default Vue.extend({
   },
 
   methods: {
+    updateTitle() {
+      console.log(this.$route)
+      this.header_title = 'MUSÉE POUR LA PHOTOGRAPHIE'
+      if (this.$route.name !== 'index')
+        this.header_title = String(this.$route.name)
+    },
+
     toggleMenu() {
       this.$store.commit('setShowMenu', !this.showMenu)
     },
@@ -76,6 +92,7 @@ export default Vue.extend({
   padding: 0 $main-padding * 2;
   display: flex;
   position: fixed;
+  text-transform: uppercase;
   top: 0;
   left: 0;
   width: 100%;
@@ -87,8 +104,20 @@ export default Vue.extend({
   font-size: $desktop-font-size;
   align-items: center;
 
+  a {
+    text-decoration: none;
+  }
+
   &--hide {
     transform: translate(0, -100%);
+  }
+
+  .opening {
+    display: block;
+    width: 50%;
+    white-space: nowrap;
+    padding-left: 1.4em;
+    margin-top: 0.2em;
   }
 
   &__home {
@@ -115,7 +144,7 @@ export default Vue.extend({
   }
 
   &__sections {
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
   }
@@ -127,6 +156,16 @@ export default Vue.extend({
     img {
       margin-left: 1em;
       height: 1em;
+    }
+  }
+
+  &__open {
+    width: 25vh;
+    display: flex;
+
+    span {
+      display: block;
+      margin-bottom: -0.4em;
     }
   }
 
@@ -167,6 +206,10 @@ export default Vue.extend({
     }
 
     &__social {
+      display: none;
+    }
+
+    .opening {
       display: none;
     }
   }

@@ -1,20 +1,14 @@
-import { cadeau, membre, magazine, infos } from './writers'
+import { infos, bienvenue } from './writers'
 
 export const home = [
   {
     type: 'row',
     blocks: [
       {
-        img: 'img/image--3.jpg',
-        // text: "PHO<span style='mix-blend-mode: difference'>TO</span><br>ELY<span style='mix-blend-mode: difference'>SEE</span>",
-        link: '/expositions',
-        title: 'a lire',
-        writer: magazine,
-      },
-      {
         img: 'img/image--0.jpg',
         link: '/expositions',
-        writer: membre,
+        text: 'EXPOSITIONS',
+        // writer: membre
       },
       {
         img: 'img/image--2.jpg',
@@ -26,6 +20,16 @@ export const home = [
         img: 'img/image--6.jpg',
         credits: 'Nicolas Faure, A9, 1997',
       },
+      {
+        // img: 'img/image--3.jpg',
+        // text: "PHO<span style='mix-blend-mode: difference'>TO</span><br>ELY<span style='mix-blend-mode: difference'>SEE</span>",
+        link: '/expositions',
+        text: 'RÉSERVER <br>SON BILLET',
+        backgroundColor: '#B6E7DA',
+        color: 'black',
+        // title: 'a lire',
+        // writer: billeterie
+      },
     ],
   },
   {
@@ -33,12 +37,13 @@ export const home = [
     blocks: [
       {
         backgroundColor: 'hsl(322, 5%, 10%)',
-        title: 'smarter living',
-        writer: cadeau,
+        title: "Aujourd'hui",
+        writer: bienvenue,
+        text: "<span class='content'><br>Ouvert aujourd'hui <br />de 9h – 18h </span> <span class='content'> Place de la Gare 17 <br/> CH-1003 Lausanne </span>",
       },
       {
-        img: 'img/image--5.jpg',
-        typo: 'NE<br>WS',
+        img: 'img/image--9.jpg',
+        typo: 'OP<br>EN',
       },
     ],
   },
@@ -61,6 +66,41 @@ export const home = [
     ],
   },
   {
+    type: 'sticky-block',
+    columns: [
+      {
+        type: 'sticky',
+        backgroundColor: 'hsl(326, 54%, 85%)',
+        color: 'black',
+        text: 'EN CE MOMENT',
+      },
+      {
+        blocks: [
+          {
+            img: '/img/image--26.jpg',
+            text: 'Exposition des collections',
+            title: '23.01 — 12.04.22',
+            link: '/expositions/exposition',
+          },
+          {
+            img: '/img/image--27.jpg',
+            text: 'Yann Mingard, Tant de choses planent dans l’air, d’où notre vertige',
+            title: '23.01 — 12.04.22',
+            link: '/expositions/exposition',
+            bottom: 'Annulé',
+          },
+          {
+            img: '/img/image--36.jpg',
+            text: "reGeneration5 <span class='content'>Initié en 2005 et réitéré tous les cinq ans, le projet reGeneration dédié à la photographie émergente internationale connaîtra sa quatrième édition pour les 35 ans du Musée de l’Elysée.</span>",
+            title: '23.01 — 12.04.22',
+            link: '/expositions/exposition',
+          },
+        ],
+      },
+    ],
+  },
+
+  {
     type: 'row',
     blocks: [
       {
@@ -77,12 +117,7 @@ export const home = [
       },
     ],
   },
-  {
-    type: 'full-block',
-    img: 'img/image--24.jpg',
-    text: 'MUSEE CANTONAL<br>POUR LA PHOTOGRAPHIE',
-    fontSize: 'small',
-  },
+
   {
     type: 'row',
     blocks: [
@@ -91,6 +126,7 @@ export const home = [
       },
       {
         img: 'img/image--14.jpg',
+        text: '<h2>AGENDA</h2>',
       },
     ],
   },
@@ -98,48 +134,63 @@ export const home = [
     type: 'row',
     blocks: [
       {
+        title: '23.01 — 12.04.22',
         img: 'img/image--15.jpg',
+        text: 'Titre event',
+        bottom: 'Tout public',
       },
       {
+        title: '23.01 — 12.04.22',
         img: 'img/image--16.jpg',
+        text: 'Titre event',
       },
       {
+        title: '23.01 — 12.04.22',
         img: 'img/image--17.jpg',
+        text: 'Titre event',
       },
       {
+        title: '23.01 — 12.04.22',
         img: 'img/image--18.jpg',
+        text: 'Titre event',
       },
     ],
+  },
+  {
+    type: 'full-block',
+    img: 'img/image--23.jpg',
+    text: '<span> PRIX ELYSÉE</span><span class="content"><a href="#">En savoir plus</a></span>',
+    fontSize: 'large',
   },
   {
     type: 'sticky-block',
     columns: [
       {
         type: 'sticky',
-        backgroundColor: 'red',
-        img: 'img/image--32.jpg',
-        text: "<span style='mix-blend-mode: difference'>PHO</span>TO<br><span style='mix-blend-mode: difference'>ELY</span>SEE",
+        backgroundColor: '#1B181A',
+        //  img: 'img/image--37.jpg',
+        text: "<span><h2>MAGAZINE</h2></span><br><h5>Découvrez notre Magazine<br> lorem ipsum dolor sit amet<br> adipiscing elit.</h5><h5 class='content'><br><a href='/magazine'>Voir le magazine</a></h5>",
+        typo: 'EX<br>PO<br>SI',
       },
       {
         blocks: [
           {
+            title: '01.02.2021',
             img: 'img/image--26.jpg',
-            typo: 'EX<br>PO',
+            text: '_Field chez Payot Librairie à Lausanne',
+            bottom: '6 min',
           },
           {
-            img: 'img/image--27.jpg',
+            title: '01.02.2021',
+            img: 'img/image--32.jpg',
+            text: 'Ferenc Berko : Fascination pour l’ordinaire',
+            bottom: '6 min',
           },
           {
+            title: '01.02.2021',
             img: 'img/image--28.jpg',
-          },
-          {
-            img: 'img/image--29.jpg',
-          },
-          {
-            img: 'img/image--30.jpg',
-          },
-          {
-            img: 'img/image--33.jpg',
+            text: "Cérémonie de remise des clés du nouveau bâtiment du Musée de l'Elysée et du mudac",
+            bottom: '6 min',
           },
         ],
       },
@@ -150,15 +201,21 @@ export const home = [
     blocks: [
       {
         img: 'img/image--21.jpg',
+        text: 'Bibliothéque',
       },
       {
         img: 'img/image--22.jpg',
+        text: 'Nous soutenir',
       },
       {
         img: 'img/image--23.jpg',
+        text: 'Boutique <br> en ligne',
       },
       {
-        img: 'img/image--25.jpg',
+        backgroundColor: 'hsl(322, 5%, 10%)',
+        // img: 'img/image--25.jpg',
+        title: 'Projet',
+        text: 'LabElysée',
       },
     ],
   },

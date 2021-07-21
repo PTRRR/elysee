@@ -1,11 +1,14 @@
 <template lang="pug">
   .sticky-block(
     :class="styckyBlockCssClasses"
+
+
   )
     .sticky-block__column(
       v-for="column of columns"
       :class="getColumnCssClasses(column)"
       :style="getColumnCssStyle(column)"
+      :id="getId(column)"
     )
       template(
         v-if="column.type === 'sticky'"
@@ -41,6 +44,7 @@ type ColumnType = {
   backgroundColor?: string
   blocks?: Array<BlockType>
   img?: string
+  refTarget?: string
 }
 
 export default Vue.extend({
@@ -73,6 +77,10 @@ export default Vue.extend({
       return {
         width: `${100 / this.columns.length}%`,
       }
+    },
+
+    getId(column: ColumnType) {
+      return column.refTarget
     },
 
     getContentCssStyle(column: ColumnType) {

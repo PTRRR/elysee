@@ -32,7 +32,7 @@ const lists = [
       },
       {
         name: 'collections',
-        link: '/expositions',
+        link: '/collections',
       },
       {
         name: 'agenda',
@@ -40,7 +40,7 @@ const lists = [
       },
       {
         name: 'magazine',
-        link: '/expositions',
+        link: '/magazine',
       },
       {
         name: 'informations',
@@ -149,7 +149,9 @@ export default Vue.extend({
     opacity: 1;
     pointer-events: initial;
   }
-
+  a {
+    text-decoration: none;
+  }
   ul {
     list-style: none;
     padding: #{2 * $main-padding} #{2 * $main-padding} 0;

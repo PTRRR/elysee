@@ -3,7 +3,7 @@
   img.infos__image(src='~static/img/musee.jpg')
   .infos__content
     .infos__row
-      h3.infos__title INFOS <br> PRATIQUES
+      h3.infos__title INFORMATIONS PRATIQUES
       .infos__content
         p Le Musée de l’Elysée est temporairement fermé pour organiser son déménagement à PLATEFORME 10, le nouveau quartier des arts de Lausanne. La cérémonie de remise des clés du nouveau bâtiment du Musée de l'Elysée et du mudac aura lieu du 4 au 7 novembre 2021. L’inauguration des espaces d'exposition est prévue pour juin 2022. D'ici là, suivez l'actualité du musée sur L'Elysée hors champ et sur nos réseaux sociaux !
     .infos__row
@@ -95,104 +95,4 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss">
-.infos {
-  $i: &;
-  display: flex;
-  flex-direction: column;
-  padding: calc(#{$desktop-menu-top-bar-height} - #{$main-padding})
-    $main-padding * 2;
-
-  &__image {
-    height: calc(100vh - #{$desktop-menu-top-bar-height} - #{$main-padding});
-    object-fit: cover;
-    object-position: 50% 100%;
-  }
-
-  &__row {
-    display: flex;
-    padding: 1.5em 0;
-
-    #{$i}__row {
-      padding: 1em 0;
-    }
-
-    & > * {
-      width: 50%;
-    }
-
-    & + & {
-      border-top: solid 0.15em black;
-    }
-
-    &:last-child {
-      padding-bottom: 0;
-    }
-  }
-
-  &__title {
-    margin: 0;
-    font-size: $main-font-size;
-    font-family: PhotoC;
-    line-height: 0.9;
-    margin-bottom: -0.2em;
-  }
-
-  &__content {
-    p,
-    h5 {
-      margin: 0;
-      line-height: 1.2;
-    }
-
-    p {
-      font-family: PhotoCText;
-    }
-  }
-
-  @media screen and (max-width: $tablet-breakpoint) {
-    &__content {
-      p,
-      h5 {
-        font-size: $desktop-font-size;
-      }
-    }
-  }
-
-  @media screen and (max-width: $mobile-breakpoint) {
-    &__image {
-      height: calc(50vh - #{$desktop-menu-top-bar-height} - #{$main-padding});
-      object-fit: cover;
-      object-position: 50% 100%;
-    }
-
-    &__title {
-      margin-bottom: 0.6em;
-    }
-
-    &__content {
-      p,
-      h5 {
-        font-size: $mobile-menu-font-size;
-      }
-    }
-
-    &__row {
-      flex-direction: column;
-
-      & > * {
-        width: 100%;
-      }
-    }
-
-    &__column {
-      & + & {
-        margin-top: 2em;
-      }
-    }
-
-    padding: calc(#{$mobile-menu-top-bar-height} - #{$main-padding})
-      $main-padding * 2;
-  }
-}
-</style>
+<style lang="scss"></style>

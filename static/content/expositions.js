@@ -1,29 +1,34 @@
-import { exposition, liste } from './writers'
 export const expositions = [
   {
     type: 'row',
     blocks: [
       {
         img: '/img/image--34.jpg',
-        writer: exposition,
-        link: '/expositions/template',
-        title: 'EN COURS',
+        // writer: exposition,
+        text: 'EN CE MOMENT',
+        link: '#now',
+        // type: 'anchor',
+        // target: 'now'
       },
       {
-        img: '/img/image--35.jpg',
-        writer: liste,
-        link: '/expositions/liste',
+        img: '/img/image--30.jpg',
+        // writer: liste,
+        text: 'À VENIR',
+        //  link: '/expositions/liste'
       },
       {
         img: '/img/image--36.jpg',
-        writer: exposition,
-        link: '/expositions/template',
-        title: '01.01.2022',
+        text: 'DANS <br>LE MONDE',
+        // writer: exposition,
+        // link: '/expositions/exposition'
       },
       {
-        img: '/img/image--37.jpg',
-        writer: liste,
-        link: '/expositions/liste',
+        // img: '/img/image--37.jpg',
+        text: 'RÉSERVER<br> SON BILLET',
+        backgroundColor: '#B6E7DA',
+        color: 'black',
+        // writer: liste,
+        // link: '/expositions/liste',
       },
     ],
   },
@@ -33,31 +38,29 @@ export const expositions = [
       {
         type: 'sticky',
         backgroundColor: 'hsl(326, 54%, 85%)',
-        color: 'white',
-        text: 'A VENIR',
+        color: 'black',
+        text: 'EN CE MOMENT',
+        refTarget: 'now',
       },
       {
         blocks: [
           {
             img: '/img/image--26.jpg',
-            text: 'reGeneration5',
+            text: 'Exposition des collections',
             title: '23.01 — 12.04.22',
-            link: '/expositions/template',
-          },
-          {
-            img: '/img/image--27.jpg',
+            link: '/expositions/exposition',
           },
           {
             img: '/img/image--28.jpg',
-          },
-          {
-            img: '/img/image--29.jpg',
+            text: 'Exposition permanente',
+            link: '/expositions/exposition',
+            bottom: 'Annulé',
           },
           {
             img: '/img/image--30.jpg',
-          },
-          {
-            img: '/img/image--33.jpg',
+            text: "reGeneration5 <span class='content'>Initié en 2005 et réitéré tous les cinq ans, le projet reGeneration dédié à la photographie émergente internationale connaîtra sa quatrième édition pour les 35 ans du Musée de l’Elysée.</span>",
+            title: '23.01 — 12.04.22',
+            link: '/expositions/exposition',
           },
         ],
       },
@@ -69,73 +72,30 @@ export const expositions = [
       {
         blocks: [
           {
-            img: '/img/image--1.jpg',
-          },
-          {
-            img: '/img/image--2.jpg',
-          },
-          {
             img: '/img/image--3.jpg',
+            text: 'Exposition des collections',
+            title: '23.01 — 12.04.22',
+            link: '/expositions/exposition',
           },
           {
-            img: '/img/image--4.jpg',
+            img: '/img/image--31.jpg',
+            text: 'Yann Mingard, Tant de choses planent dans l’air, d’où notre vertige',
+            title: '23.01 — 12.04.22',
+            link: '/expositions/exposition',
+            bottom: 'Annulé',
           },
           {
-            img: '/img/image--5.jpg',
-          },
-          {
-            img: '/img/image--6.jpg',
-          },
-        ],
-      },
-      {
-        blocks: [
-          {
-            img: '/img/image--7.jpg',
-          },
-          {
-            img: '/img/image--8.jpg',
-          },
-          {
-            img: '/img/image--9.jpg',
-          },
-          {
-            img: '/img/image--10.jpg',
-          },
-          {
-            img: '/img/image--11.jpg',
-          },
-          {
-            img: '/img/image--12.jpg',
-          },
-        ],
-      },
-      {
-        blocks: [
-          {
-            img: '/img/image--13.jpg',
-          },
-          {
-            img: '/img/image--14.jpg',
-          },
-          {
-            img: '/img/image--15.jpg',
-          },
-          {
-            img: '/img/image--16.jpg',
-          },
-          {
-            img: '/img/image--17.jpg',
-          },
-          {
-            img: '/img/image--18.jpg',
+            img: '/img/image--32.jpg',
+            text: 'reGeneration5',
+            title: '23.01 — 12.04.22',
+            link: '/expositions/exposition',
           },
         ],
       },
       {
         type: 'sticky',
-        backgroundColor: 'hsl(164, 51%, 81%)',
-        text: 'PASSEES',
+        backgroundColor: '#1B181A',
+        text: 'À VENIR',
       },
     ],
   },
@@ -160,10 +120,34 @@ export const expositions = [
     type: 'row',
     blocks: [
       {
-        img: '/img/image--34.jpg',
+        // img: '/img/image--34.jpg',
+        text: '<h2>ARCHIVES</h2>',
+        backgroundColor: '#B6E7DA',
+        color: 'black',
       },
       {
         img: '/img/image--35.jpg',
+      },
+    ],
+  },
+  {
+    type: 'row',
+    blocks: [
+      {
+        img: '/img/image--3.jpg',
+        text: '2020',
+      },
+      {
+        img: '/img/image--4.jpg',
+        text: '2019',
+      },
+      {
+        img: '/img/image--5.jpg',
+        text: '2018',
+      },
+      {
+        img: '/img/image--6.jpg',
+        text: '2017',
       },
     ],
   },

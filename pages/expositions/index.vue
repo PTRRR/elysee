@@ -17,6 +17,10 @@ export default Vue.extend({
       expositions,
     }
   },
+
+  head() {
+    return {}
+  },
 })
 </script>
 

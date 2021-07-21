@@ -1,57 +1,62 @@
 <template lang="pug">
-  .block(
-    :is="link ? 'nuxt-link' : 'div'"
-    :to="link"
-    :class="blockCssClasses"
-    @click="onClick"
-    v-observe-visibility="onVisibilityChange"
-  )
-    .block__inner
-      .block__content
-        .block__image(
-          v-if="img"
-        )
-          img(
-            :src="img"
-          )
+.block(
+	:is="link ? 'nuxt-link' : 'div'"
+	:to="link"
+	:class="blockCssClasses"
+	@click="onClick(type)"
+	v-observe-visibility="onVisibilityChange"
+)
+	.block__inner
+		.block__content
+			.block__image(
+				v-if="img"
+			)
+				img(
+					:src="img"
+				)
 
-        .block__background(
-          v-else
-          :style="contentCssStyle"
-        )
+			.block__background(
+				v-else
+				:style="contentCssStyle"
+			)
 
-        span.block__title(
-          v-if="title"
-          v-html="title"
-          :style="textCssStyle"
-        )
+			span.block__title(
+				v-if="title"
+				v-html="title"
+				:style="textCssStyle"
+			)
 
-        .block__text(
-          v-if="text"
-          v-html="text"
-          :style="textCssStyle"
-          :class="getTextCssClasses(text)"
-        )
+			writer.block__text(
+				v-if="writer"
+				:items="writer"
+				:show="isVisible"
+				:style="textCssStyle"
+				:class="getTextCssClasses(writer)"
+			)
 
-        writer.block__text(
-          v-if="writer"
-          :items="writer"
-          :show="isVisible"
-          :style="textCssStyle"
-          :class="getTextCssClasses(writer)"
-        )
+			.block__text(
+				v-if="text"
+				v-html="text"
+				:style="textCssStyle"
+				:class="getTextCssClasses(text)"
+			)
 
-        .block__typo(
-          v-if="typo"
-          v-html="typo"
-          :style="textCssStyle"
-        )
+			span.block__bottom(
+				v-if="bottom"
+				v-html="bottom"
+				:style="textCssStyle"
+			)
 
-        span.block__credits(
-          v-if="credits"
-          v-html="credits"
-        )
+			.block__typo(
+				v-if="typo"
+				v-html="typo"
+				:style="textCssStyle"
+			)
 
+			span.block__credits(
+				v-if="credits"
+				v-html="credits"
+			)
 </template>
 
 <script lang="ts">
@@ -59,7 +64,9 @@ import Vue from 'vue'
 import Writer from '@/components/Writer.vue'
 
 export default Vue.extend({
-  components: { Writer },
+  components: {
+    Writer,
+  },
 
   props: {
     link: {
@@ -92,6 +99,11 @@ export default Vue.extend({
       default: '',
     },
 
+    bottom: {
+      type: String,
+      default: '',
+    },
+
     credits: {
       type: String,
       default: '',
@@ -105,6 +117,16 @@ export default Vue.extend({
     writer: {
       type: Array,
       default: null,
+    },
+
+    type: {
+      type: String,
+      default: 'image',
+    },
+
+    target: {
+      type: String,
+      default: '',
     },
   },
 
@@ -145,15 +167,24 @@ export default Vue.extend({
       this.isVisible = visible
     },
 
-    onClick() {
+    onClick(action: string) {
       // TODO: Choose between those two behaviour
 
       // Credits
       // this.showCredits = !this.showCredits
 
-      // Fulscreen image + credits
-      this.$store.commit('setShowImageOverlay', true)
-      this.$store.commit('setImageOverlay', this.img)
+      if (action === 'anchor') {
+        const targetDiv = this.$refs[this.target]
+        console.log(targetDiv)
+        // if (targetDiv)
+        //   window.scrollTo(0, targetDiv.offsetTop);
+      } else {
+        // Fulscreen image + credits
+        this.$store.commit('setShowImageOverlay', true)
+        this.$store.commit('setImageOverlay', this.img)
+      }
+      /*
+       */
     },
 
     getTextCssClasses(text: any) {
@@ -199,10 +230,11 @@ export default Vue.extend({
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
 
-  &__image,
-  &__background {
+  &__background,
+  &__image {
     position: absolute;
     top: 0;
     left: 0;
@@ -211,8 +243,8 @@ export default Vue.extend({
     overflow: hidden;
   }
 
-  &__title,
-  &__credits {
+  &__credits,
+  &__title {
     position: absolute;
     left: 50%;
     color: white;
@@ -221,6 +253,16 @@ export default Vue.extend({
     width: 100%;
     padding: $small-font-size;
     text-transform: uppercase;
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    font-size: $small-font-size;
+    width: 100%;
+    padding: $small-font-size;
+    text-align: center;
   }
 
   &__title {
@@ -250,8 +292,12 @@ export default Vue.extend({
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 1em 0;
-    margin: -1em 0;
+    padding: 1em 0em;
+    margin: -1.25em 0;
+  }
+  &__text {
+    // padding-left: 1em;
+    // padding-right: 1em;
   }
 
   &__typo {
@@ -268,6 +314,12 @@ export default Vue.extend({
       transform $transition-duration $easing;
   }
 
+  img.symbol {
+    width: auto;
+    height: auto;
+    margin: 0.5em;
+  }
+
   &--show-credits img {
     opacity: 0.15;
   }
@@ -278,9 +330,17 @@ export default Vue.extend({
     }
   }
 
+  span.content {
+    display: block;
+    margin-top: 1em;
+    font-size: $desktop-font-size;
+    padding: 0 2em;
+  }
+
   @media screen and (max-width: $tablet-breakpoint) {
-    &__title,
-    &__credits {
+    &__bottom,
+    &__credits,
+    &__title {
       font-size: $mobile-menu-font-size;
     }
   }

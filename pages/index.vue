@@ -2,6 +2,7 @@
   grid.home(
     :items="home"
   )
+
 </template>
 
 <script lang="ts">

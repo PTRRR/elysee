@@ -48,6 +48,83 @@ export const photoElysee = [
   },
 ]
 
+export const billeterie = [
+  {
+    type: 'span',
+    html: 'R',
+  },
+  {
+    type: 'span',
+    html: 'E',
+  },
+  {
+    type: 'span',
+    html: 'S',
+  },
+  {
+    type: 'span',
+    html: 'E',
+  },
+  {
+    type: 'span',
+    html: 'R',
+  },
+  {
+    type: 'span',
+    html: 'V',
+  },
+  {
+    type: 'span',
+    html: 'E',
+  },
+  {
+    type: 'span',
+    html: 'R',
+  },
+  {
+    type: 'br',
+  },
+  {
+    type: 'span',
+    html: 'S',
+  },
+  {
+    type: 'span',
+    html: 'O',
+  },
+  {
+    type: 'span',
+    html: 'N',
+  },
+  {
+    type: 'br',
+  },
+  {
+    type: 'span',
+    html: 'B',
+  },
+  {
+    type: 'span',
+    html: 'I',
+  },
+  {
+    type: 'span',
+    html: 'L',
+  },
+  {
+    type: 'span',
+    html: 'L',
+  },
+  {
+    type: 'span',
+    html: 'E',
+  },
+  {
+    type: 'span',
+    html: 'T',
+  },
+]
+
 export const exposition = [
   {
     type: 'span',
@@ -95,6 +172,43 @@ export const exposition = [
   {
     type: 'span',
     html: 'S',
+  },
+]
+
+export const bienvenue = [
+  {
+    type: 'span',
+    html: 'BIENVENUE ',
+  },
+  {
+    type: 'span',
+    html: 'AU',
+  },
+  {
+    type: 'br',
+  },
+  {
+    type: 'span',
+    html: 'MUSEE ',
+  },
+  {
+    type: 'span',
+    html: 'DE ',
+  },
+  {
+    type: 'br',
+  },
+  {
+    type: 'span',
+    html: 'LA ',
+  },
+  {
+    type: 'span',
+    html: 'PHOTO',
+  },
+  {
+    type: 'span',
+    html: 'GRAPHIE',
   },
 ]
 

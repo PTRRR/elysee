@@ -71,5 +71,11 @@ export default Vue.extend({
       line-height: 0.85;
     }
   }
+  span.content {
+    display: block;
+    margin-top: 1em;
+    font-size: $desktop-font-size;
+    padding: 0 2em;
+  }
 }
 </style>
