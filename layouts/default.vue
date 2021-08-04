@@ -91,6 +91,9 @@ p {
 .no-border {
   border: 0 !important;
 }
+.border {
+  border-top: 1px black solid;
+}
 img.half-width {
   width: 75%;
 }
