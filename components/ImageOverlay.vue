@@ -6,6 +6,8 @@
     img(
       :src="imageOverlaySource"
     )
+    .label
+      h2 Martine Franck, Plage, village de Puri, Inde <br> 1980 © Martine Franck Magnum Photos
 </template>
 
 <script lang="ts">
@@ -44,22 +46,38 @@ export default Vue.extend({
 <style lang="scss">
 .image-overlay {
   position: fixed;
-  top: $desktop-menu-top-bar-height;
+  //top: $desktop-menu-top-bar-height;
   left: 0;
   width: 100%;
-  height: calc(100% - #{$desktop-menu-top-bar-height});
+  // height: calc(100% - #{$desktop-menu-top-bar-height});
+  height: 100vh;
   z-index: 100;
   background-color: rgba(255, 255, 255, 0.9);
   transition: all $transition-duration $easing;
-  padding: 0 2 * $main-padding 2 * $main-padding;
+  padding: $desktop-menu-top-bar-height 2 * $main-padding 2 * $main-padding;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
 
   img {
-    width: 100%;
-    height: 100%;
+    //  width: 100%;
+    // height: 100%;
     object-fit: contain;
+    // height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    flex: 1 1 0%;
+    overflow: auto;
+    display: flex;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    align-items: center;
+    justify-content: center;
   }
 
+  .label {
+    font-size: $desktop-font-size;
+  }
   &--fullscreen {
     top: 0;
     height: 100%;

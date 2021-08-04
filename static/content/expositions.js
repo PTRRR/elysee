@@ -4,31 +4,22 @@ export const expositions = [
     blocks: [
       {
         img: '/img/image--34.jpg',
-        // writer: exposition,
         text: 'EN CE MOMENT',
         link: '#now',
-        // type: 'anchor',
-        // target: 'now'
       },
       {
         img: '/img/image--30.jpg',
-        // writer: liste,
         text: 'À VENIR',
-        //  link: '/expositions/liste'
       },
       {
         img: '/img/image--36.jpg',
         text: 'DANS <br>LE MONDE',
-        // writer: exposition,
-        // link: '/expositions/exposition'
+        link: '#world',
       },
       {
-        // img: '/img/image--37.jpg',
         text: 'RÉSERVER<br> SON BILLET',
         backgroundColor: '#B6E7DA',
         color: 'black',
-        // writer: liste,
-        // link: '/expositions/liste',
       },
     ],
   },
@@ -108,26 +99,6 @@ export const expositions = [
       {
         img: '/img/image--14.jpg',
       },
-      {
-        img: '/img/image--15.jpg',
-      },
-      {
-        img: '/img/image--16.jpg',
-      },
-    ],
-  },
-  {
-    type: 'row',
-    blocks: [
-      {
-        // img: '/img/image--34.jpg',
-        text: '<h2>ARCHIVES</h2>',
-        backgroundColor: '#B6E7DA',
-        color: 'black',
-      },
-      {
-        img: '/img/image--35.jpg',
-      },
     ],
   },
   {
@@ -136,18 +107,33 @@ export const expositions = [
       {
         img: '/img/image--3.jpg',
         text: '2020',
+        title: 'Archives',
       },
       {
         img: '/img/image--4.jpg',
         text: '2019',
+        title: 'Archives',
       },
       {
         img: '/img/image--5.jpg',
         text: '2018',
+        title: 'Archives',
       },
       {
-        img: '/img/image--6.jpg',
-        text: '2017',
+        text: 'VOIR<br>LES ARCHIVES',
+        backgroundColor: '#B6E7DA',
+        link: '/archives',
+        color: 'black',
+      },
+    ],
+  },
+  {
+    type: 'row',
+    blocks: [
+      {
+        backgroundColor: '#1B181A',
+        text: 'Dans le monde',
+        refTarget: 'world',
       },
     ],
   },

@@ -174,10 +174,9 @@ export default Vue.extend({
       // this.showCredits = !this.showCredits
 
       if (action === 'anchor') {
-        const targetDiv = this.$refs[this.target]
-        console.log(targetDiv)
+        // const targetDiv = this.$refs[this.target]
         // if (targetDiv)
-        //   window.scrollTo(0, targetDiv.offsetTop);
+        // window.scrollTo(0, targetDiv.offsetTop);
       } else {
         // Fulscreen image + credits
         this.$store.commit('setShowImageOverlay', true)
@@ -298,6 +297,11 @@ export default Vue.extend({
   &__text {
     // padding-left: 1em;
     // padding-right: 1em;
+  }
+
+  p {
+    font-size: $desktop-font-size;
+    padding: 0 1em;
   }
 
   &__typo {

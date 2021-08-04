@@ -1,4 +1,10 @@
-export const instagram = [
+export const dossier = [
+  {
+    type: 'full-block',
+    img: 'img/image--34.jpg',
+    text: '<span>Dossier</span>',
+    fontSize: 'large',
+  },
   {
     type: 'sticky-block',
     columns: [

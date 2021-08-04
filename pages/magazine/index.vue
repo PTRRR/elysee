@@ -3,6 +3,9 @@
     grid(
       :items="magazine"
     )
+    grid.expositions(
+      :items="dossier"
+    )
     .infos
 
       .infos__row
@@ -12,17 +15,12 @@
           input(type="text" name="year" placeholder="Email")
           input.button-large(type="submit" name="year" placeholder="Email")
 
-
-      grid.expositions(
-        :items="instagram"
-      )
-
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import { magazine } from '@/static/content/magazine'
-import { instagram } from '@/static/content/instagram'
+import { dossier } from '@/static/content/dossier'
 
 import Grid from '@/components/Grid.vue'
 
@@ -32,7 +30,7 @@ export default Vue.extend({
   data() {
     return {
       magazine,
-      instagram,
+      dossier,
     }
   },
 })

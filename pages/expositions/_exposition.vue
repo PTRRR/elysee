@@ -54,6 +54,8 @@
         src="~static/img/image--9.jpg"
         @click="showImageOverlay('image--9.jpg')"
       )
+    .swiper-button-prev
+    .swiper-button-next
 
   .infos__row
     .infos__title
@@ -68,11 +70,11 @@
       h5 Fotonoviembre, <br>Santa Cruz de Tenerife
 
     .infos__content
-      ul.infos__links
-        h5.active Description
-        h5 Vidéo
-        h5 Podcast
-      br
+      //- ul.infos__links
+      //-   h5.active Description
+      //-   h5 Vidéo
+      //-   h5 Podcast
+      //- br
 
       p Après Lausanne, où l'exposition a été présentée au Musée de l'Elysée au printemps 2019, retrouvez l'importante rétrospective à Martine Franck au FOMU (Fotomuseum) à Anvers. L'exposition est prolongée jusqu'au 18 avril 2021.
       p Souhaitant mettre en lumière l’œuvre pionnier des femmes photographes au cours du XXe siècle, le Musée de l’Elysée présente une importante rétrospective consacrée à Martine Franck (1938- 2012). Conçue par la Fondation Henri CartierBresson, Paris, et coproduite avec le Musée de l’Elysée, cette exposition, unique par son ampleur, est constituée de près de 140 photographies, dont certaines inédites, en grande partie sélectionnées par la photographe de son vivant.
@@ -89,6 +91,7 @@
     .infos__content
       h5 Marmarita, Reef Homs, 11 septembre 2013 © Matthias Bruggmann
       p Press Images. Courtesy Musée de l’Elysée, Lausanne et Galerie Polaris, Paris
+      .button-large.button Voir le détail
 
   .infos__row.dropdown
     h5.infos__title INFORMATIONS PRATIQUES
@@ -219,9 +222,13 @@ export default Vue.extend({
         mousewheel: {
           forceToAxis: true,
         },
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
+        // autoplay: {
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         },
       },
     }
@@ -266,6 +273,22 @@ export default Vue.extend({
       height: 100%;
       width: auto;
       cursor: pointer;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: white;
+  }
+  .swiper-button-prev {
+    &:after {
+      content: '←';
+      font-family: PhotoCText;
+    }
+  }
+  .swiper-button-next {
+    &:after {
+      content: '→';
+      font-family: PhotoCText;
     }
   }
 

@@ -52,6 +52,14 @@ const lists = [
     class: 'menu__secondary-sections',
     items: [
       {
+        name: 'LabElysée',
+        link: '/labelysee',
+      },
+      {
+        name: 'Archives',
+        link: '/archives',
+      },
+      {
         name: 'exposition',
         link: '/expositions',
       },
@@ -70,6 +78,10 @@ const lists = [
       {
         name: 'le musee',
         link: '/expositions',
+      },
+      {
+        name: 'Nous soutenir',
+        link: '/membre',
       },
     ],
   },

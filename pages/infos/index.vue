@@ -1,5 +1,6 @@
 <template lang="pug">
 .infos
+  alert-bar
   img.infos__image(src='~static/img/musee.jpg')
   .infos__content
     .infos__row

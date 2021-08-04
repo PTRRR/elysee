@@ -5,6 +5,7 @@
 	image-overlay
 	nuxt
 	footer-bar
+
 </template>
 
 <script lang="ts">
@@ -21,6 +22,14 @@ export default Vue.extend({
   },
   head: {
     title: 'Elysee - Musee pour la photographie',
+  },
+  watch: {
+    $route() {
+      // on route change
+      // console.log("change route");
+      // let isInfo = this.$route.name === 'infos' ? true: false;
+      // this.showAlert = false;
+    },
   },
 })
 </script>
@@ -44,7 +53,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   font-weight: normal;
   margin: 0;
 }
@@ -82,7 +92,7 @@ p {
   border: 0 !important;
 }
 img.half-width {
-  width: 50%;
+  width: 75%;
 }
 
 @media screen and (max-width: $tablet-breakpoint) {
@@ -112,6 +122,15 @@ img.half-width {
   background: white;
   color: black;
   cursor: pointer;
+  border: solid 0.05em black;
+  background: white;
+}
+
+.button.dark {
+  background: none;
+  color: white;
+  border: solid 0.05em white;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -119,12 +138,15 @@ img.half-width {
   color: white;
 }
 
+.button.dark:hover {
+  background: white;
+  color: black;
+}
+
 .button-large {
   display: inline-block;
   font-size: $desktop-font-size;
   padding: 0.75em 1.5em;
-  border: solid 0.05em black;
-  background: white;
 }
 
 .player {
@@ -235,8 +257,10 @@ input {
   }
 
   &__links {
-    margin: 0 0 1em 0;
-    border-bottom: solid 0.1em black;
+    margin: 0;
+    border-bottom: solid 1px black;
+    font-size: $desktop-font-size;
+    padding: 0.5em 0;
 
     h5 {
       display: inline-block;
@@ -291,6 +315,65 @@ input {
 
     padding: calc(#{$mobile-menu-top-bar-height} - #{$main-padding})
       $main-padding * 2;
+  }
+}
+
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+  grid-gap: 0.5rem;
+  > div {
+    //background: black;
+    padding: 0 2rem;
+    display: grid;
+    place-items: center;
+    &::before {
+      // for apsect ratio
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    img {
+      width: 100%;
+      // height: 100%;
+      // object-fit: contain;
+      grid-area: 1 / 1 / 2 / 2;
+    }
+  }
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: white;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.message-info {
+  //border: solid 0.05em black;
+  padding: 2.5rem;
+  background-color: #1a1718;
+  color: white;
+
+  p {
+    font-size: $secondary-font-size;
   }
 }
 </style>

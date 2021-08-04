@@ -66,7 +66,6 @@ export default Vue.extend({
 
   methods: {
     updateTitle() {
-      console.log(this.$route)
       this.header_title = 'MUSÉE POUR LA PHOTOGRAPHIE'
       if (this.$route.name !== 'index')
         this.header_title = String(this.$route.name)
