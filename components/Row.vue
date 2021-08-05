@@ -32,7 +32,7 @@ export default Vue.extend({
   computed: {
     blockCssStyle(): { width: string } {
       return {
-        width: `${100 / (prethis.blocks.length / 2)}%`,
+        width: `${100 / (this.blocks.length / 2)}%`,
       }
     },
   },

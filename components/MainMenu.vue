@@ -46,6 +46,10 @@ const lists = [
         name: 'informations',
         link: '/infos',
       },
+      {
+        name: 'réserver son billet',
+        link: '/infos',
+      },
     ],
   },
   {
