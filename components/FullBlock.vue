@@ -76,6 +76,9 @@ export default Vue.extend({
     margin-top: 1em;
     font-size: $desktop-font-size;
     padding: 0 2em;
+    line-height: normal;
+    width: 50%;
+    margin: 1em auto;
   }
 }
 </style>

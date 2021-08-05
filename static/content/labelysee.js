@@ -1,5 +1,10 @@
 export const labelysee = [
   {
+    type: 'full-block',
+    img: 'img/image--8.jpg',
+    text: "Lab<span class='content'>Le LabElysée est le nouvel espace d’expérimentation du Musée de l’Elysée dédié à la culture numérique. Chantier vivant au coeur du musée, le LabElysée questionne la façon dont une institution culturelle dédiée à la photographie joue avec les nouvelles technologies. <br><br> <a href='#'>Voir le plan</a></span>",
+  },
+  {
     type: 'row',
     blocks: [
       {
@@ -28,6 +33,33 @@ export const labelysee = [
         backgroundColor: '#B6E7DA',
         color: 'black',
         text: 'EDITIONS',
+      },
+    ],
+  },
+  {
+    type: 'row',
+    blocks: [
+      {
+        text: 'Recherche & Développement',
+        backgroundColor: '#1A1718',
+      },
+      {
+        img: '/img/image--34.jpg',
+        text: 'Titre du projet',
+        title: 'Catégorie',
+        link: '/labelysee/projet',
+      },
+      {
+        img: '/img/image--30.jpg',
+        text: 'Titre du projet',
+        title: 'Catégorie',
+        link: '/labelysee/projet',
+      },
+      {
+        img: '/img/image--36.jpg',
+        text: 'Titre du projet',
+        title: 'Catégorie',
+        link: '/labelysee/projet',
       },
     ],
   },
