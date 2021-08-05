@@ -350,9 +350,6 @@ export default Vue.extend({
   }
 
   @media screen and (max-width: $mobile-breakpoint) {
-    &--long-text {
-      font-size: $mobile-menu-font-size;
-    }
   }
 }
 </style>

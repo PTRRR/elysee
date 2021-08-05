@@ -115,10 +115,10 @@ img.half-width {
     width: 100%;
   }
 
-  .button {
-    width: 100%;
-    text-align: center;
-  }
+  // .button {
+  //   width: 100%;
+  //   text-align: center;
+  // }
 }
 
 .button {

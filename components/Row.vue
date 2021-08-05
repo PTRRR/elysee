@@ -32,9 +32,12 @@ export default Vue.extend({
   computed: {
     blockCssStyle(): { width: string } {
       return {
-        width: `${100 / this.blocks.length}%`,
+        width: `${100 / (prethis.blocks.length / 2)}%`,
       }
     },
+  },
+  mounted() {
+    console.log(this.blocks.length)
   },
 })
 </script>
@@ -49,7 +52,7 @@ export default Vue.extend({
     flex-wrap: wrap;
 
     &__block {
-      width: 50% !important;
+      // width: 50% !important;
     }
   }
 }

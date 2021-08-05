@@ -1,7 +1,5 @@
 <template lang="pug">
 div
-
-
   grid(
     :items="labelysee"
   )

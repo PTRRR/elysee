@@ -73,12 +73,19 @@ export default Vue.extend({
   }
   span.content {
     display: block;
-    margin-top: 1em;
     font-size: $desktop-font-size;
-    padding: 0 2em;
+    padding: 3em 2em;
     line-height: normal;
-    width: 50%;
+    width: 75%;
     margin: 1em auto;
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .full-block {
+    span.content {
+      width: 100%;
+    }
   }
 }
 </style>
