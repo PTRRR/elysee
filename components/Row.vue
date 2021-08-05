@@ -36,9 +36,6 @@ export default Vue.extend({
       }
     },
   },
-  mounted() {
-    console.log(this.blocks.length)
-  },
 })
 </script>
 
