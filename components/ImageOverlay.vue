@@ -97,4 +97,12 @@ export default Vue.extend({
     pointer-events: none;
   }
 }
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .image-overlay {
+    .label {
+      font-size: $small-font-size;
+    }
+  }
+}
 </style>
