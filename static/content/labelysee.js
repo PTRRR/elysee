@@ -1,7 +1,7 @@
 export const labelysee = [
   {
     type: 'full-block',
-    img: 'img/image--8.jpg',
+    img: 'img/labelysee--1.jpg',
     text: "Lab<br>Elysée<span class='content'>Le LabElysée est le nouvel espace d’expérimentation du Musée de l’Elysée dédié à la culture numérique. Chantier vivant au coeur du musée, le LabElysée questionne la façon dont une institution culturelle dédiée à la photographie joue avec les nouvelles technologies. <br><br> <a href='#'>Voir le plan</a></span>",
   },
   {

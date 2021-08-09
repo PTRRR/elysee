@@ -6,8 +6,13 @@
     img(
       :src="imageOverlaySource"
     )
-    .label
+    span.label
       h2 Martine Franck, Plage, village de Puri, Inde <br> 1980 © Martine Franck Magnum Photos
+      h2.right
+        nuxt-link.opening(
+          to="/collections/artwork/"
+        ) Voir le détail
+
 </template>
 
 <script lang="ts">
@@ -77,6 +82,9 @@ export default Vue.extend({
 
   .label {
     font-size: $desktop-font-size;
+    h2 {
+      display: inline;
+    }
   }
   &--fullscreen {
     top: 0;

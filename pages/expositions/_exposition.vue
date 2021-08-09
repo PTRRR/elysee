@@ -79,7 +79,9 @@
       p Après Lausanne, où l'exposition a été présentée au Musée de l'Elysée au printemps 2019, retrouvez l'importante rétrospective à Martine Franck au FOMU (Fotomuseum) à Anvers. L'exposition est prolongée jusqu'au 18 avril 2021.
       p Souhaitant mettre en lumière l’œuvre pionnier des femmes photographes au cours du XXe siècle, le Musée de l’Elysée présente une importante rétrospective consacrée à Martine Franck (1938- 2012). Conçue par la Fondation Henri CartierBresson, Paris, et coproduite avec le Musée de l’Elysée, cette exposition, unique par son ampleur, est constituée de près de 140 photographies, dont certaines inédites, en grande partie sélectionnées par la photographe de son vivant.
       p Au-delà de ce regard inédit d’une photographe sur l’ensemble de son œuvre, ce projet d’exposition et d’édition est fondé sur une étude approfondie des archives de Martine Franck, ce qui lui permet de se démarquer des rétrospectives précédentes.
-      .button-large.button Continuer la lecture
+      .button-large.button
+        span Continuer la lecture
+        .icon ↓
 
   .infos__row
     span.infos__title
@@ -93,9 +95,9 @@
       p Press Images. Courtesy Musée de l’Elysée, Lausanne et Galerie Polaris, Paris
       .button-large.button Voir le détail
 
-  .infos__row.dropdown
-    h5.infos__title INFORMATIONS PRATIQUES
-    h5.infos__title.symbol ↓
+.infos__row.dropdown h5.infos__title INFORMATIONS PRATIQUES
+h5.infos__title.symbol ↓
+
 
 
   .infos__row

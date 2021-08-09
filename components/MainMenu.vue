@@ -13,8 +13,16 @@
         .menu__item(
           :is="item.link ? 'nuxt-link' : 'div'"
           :to="item.link"
+          :class="item.state"
           @click.native="hideMenu"
         ) {{ item.name }}
+
+    br
+    .infos.tickets
+      br
+      .button-large.button.primary Réserver son billet
+      h3
+        span Ouvert aujourd'hui <br>de 8h à 19h
 
 </template>
 
@@ -46,10 +54,6 @@ const lists = [
         name: 'informations',
         link: '/infos',
       },
-      {
-        name: 'réserver son billet',
-        link: '/infos',
-      },
     ],
   },
   {
@@ -77,7 +81,7 @@ const lists = [
       },
       {
         name: 'editions',
-        link: '/expositions',
+        link: '/editions',
       },
       {
         name: 'le musee',
@@ -86,6 +90,20 @@ const lists = [
       {
         name: 'Nous soutenir',
         link: '/membre',
+      },
+    ],
+  },
+  {
+    class: 'menu__secondary-sections',
+    items: [
+      {
+        name: 'English',
+        link: '#',
+        state: 'active',
+      },
+      {
+        name: 'German',
+        link: '#',
       },
     ],
   },
@@ -156,10 +174,21 @@ export default Vue.extend({
   height: calc(100% - #{$desktop-menu-top-bar-height});
   z-index: 100;
   /* padding: 0 #{2 * $main-padding} #{2 * $main-padding}; */
-  background-color: rgba($color: #ffffff, $alpha: 0.9);
+  background-color: rgba($color: #ffffff, $alpha: 0.95);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s $easing;
+
+  .tickets {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  h3 {
+    font-size: $secondary-font-size;
+  }
 
   &--show {
     opacity: 1;
@@ -168,9 +197,10 @@ export default Vue.extend({
   a {
     text-decoration: none;
   }
+
   ul {
     list-style: none;
-    padding: #{2 * $main-padding} #{2 * $main-padding} 0;
+    padding: #{4 * $main-padding} #{2 * $main-padding} 0;
     margin: 0;
 
     li {
@@ -189,12 +219,15 @@ export default Vue.extend({
   }
 
   &__secondary-sections {
-    font-size: $small-font-size;
+    font-size: $secondary-font-size;
   }
 
   @media screen and (max-width: $tablet-breakpoint) {
     &__secondary-sections {
-      font-size: $mobile-menu-font-size;
+      font-size: $secondary-font-size;
+      li {
+        margin-top: 0.25em;
+      }
     }
   }
 

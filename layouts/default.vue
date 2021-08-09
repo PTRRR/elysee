@@ -95,7 +95,7 @@ p {
   border-top: 1px black solid;
 }
 img.half-width {
-  width: 75%;
+  // width: 75%;
 }
 
 @media screen and (max-width: $tablet-breakpoint) {
@@ -122,11 +122,17 @@ img.half-width {
 }
 
 .button {
-  background: white;
   color: black;
   cursor: pointer;
   border: solid 0.05em black;
-  background: white;
+  // background: white;
+  width: fit-content;
+  margin-right: 2rem;
+
+  .icon {
+    display: inline;
+    padding-left: 1em;
+  }
 }
 
 .button.dark {
@@ -134,6 +140,11 @@ img.half-width {
   color: white;
   border: solid 0.05em white;
   cursor: pointer;
+}
+
+.button.primary {
+  background: black;
+  color: white;
 }
 
 .button:hover {
@@ -150,6 +161,10 @@ img.half-width {
   display: inline-block;
   font-size: $desktop-font-size;
   padding: 0.75em 1.5em;
+}
+
+.button.menu-button {
+  margin: 0.5rem;
 }
 
 .player {
@@ -245,6 +260,11 @@ input {
     font-family: PhotoC;
     line-height: 0.9;
     margin-bottom: -0.2em;
+
+    img {
+      max-height: 500px;
+      max-width: 75%;
+    }
   }
 
   &__content {
@@ -253,7 +273,6 @@ input {
       margin-top: 0;
       line-height: 1.2;
     }
-
     p {
       font-family: PhotoCText;
     }
@@ -378,5 +397,11 @@ input {
   p {
     font-size: $secondary-font-size;
   }
+}
+.right {
+  float: right;
+}
+.no-padding {
+  padding-top: 0 !important;
 }
 </style>

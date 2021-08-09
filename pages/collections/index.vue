@@ -6,13 +6,13 @@ div
       .infos__row
         h3.infos__title COLLECTIONS
         .infos__content
-          p Le Musée de l’Elysée détient une collection unique couvrant toute l’histoire de l’art photographique et ses aspects les plus divers.
           .message-info
             h1 Fermeture des collections
             br
             p.no-margin En raison de la fermeture temporaire du musée entre octobre 2020 et juin 2022 et du travail à mener pour déménager les œuvres des collections, les demandes de recherche, de prêts ou de reproductions d’images pour publication sont suspendues depuis mai 2019 et jusqu'au printemps 2023. Nous serons heureux de répondre à nouveau à vos besoins dans nos locaux à PLATEFORME 10 à partir de juin 2022. Nous vous remercions vivement de votre compréhension.
           br
           br
+          p Le Musée de l’Elysée détient une collection unique couvrant toute l’histoire de l’art photographique et ses aspects les plus divers.
           p Conserver, documenter et valoriser la photographie font partie des missions premières du musée. Ses collections sont composées de près d’un million de tirages, négatifs, planches-contacts et diapositives, ainsi que d’un grand nombre d’albums. Le Musée de l’Elysée conditionne et gère des ensembles significatifs de photographes connus à l’échelle internationale comme Mario Giacomelli, Gilles Caron, Geraldo de Barros ou Pieter Hugo, ainsi que de photographes suisses tels Paul Vionnet, Constant Delessert, Hans Steiner ou Jean Mohr.
           p Grâce à son expertise, le musée est également internationalement connu pour la gestion de fonds photographiques complets. Ses collections s’enrichissent d’année en année par des achats, des dépôts et des dons. Il compte ainsi le Fonds Ella Maillart, le Fonds Nicolas Bouvier, les Archives Charles Chaplin, le Fonds Marcel Imsand ou encore le Fonds René Burri.
 

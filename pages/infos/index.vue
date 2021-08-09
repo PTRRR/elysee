@@ -10,11 +10,12 @@
     .infos__row
       h3.infos__title HORAIRES
       .infos__content
-        p Mardi-vendredi: 12—18h
-        br
-        p Samedi-dimanche: 11—18h
-        br
-        p Fermé le lundi
+        p
+           span Mardi-vendredi: 12—18h
+           br
+           span Samedi-dimanche: 11—18h
+           br
+           span Fermé le lundi
         br
         p Le premier dimanche du mois: entrée gratuite et guides disposition
         br
@@ -23,61 +24,107 @@
     .infos__row
       h3.infos__title TARIFS
       .infos__content
-        p L’entrée est gratuite jusqu’au 5 septembre 2021! Dès le 6 septembre 2021:
         .infos__row
           .infos__column
-            h5 TARIF NORMAL
+            h5 EXPOSITION PERMANENTE
             br
-            p 15 CHF
+            p Gratuit* (billet obligatoire)
           .infos__column
-            h5 TARIF RÉDUIT
+            h5 EXPOSITIONS TEMPORAIRES
             br
-            p 10 CHF
-            br
-            p Apprentis
-            br
-            p Enseignants
-            br
-            p Artistes
+            p
+             span Plein tarif: 8.-
+             br
+             span Réduit : 6.-
+             br
+             span Jusqu’à 16 ans: entrée gratuite
         .infos__row
           .infos__column
-            h5 ENTRÉE GRATUITE
+            h5 OFFRES COMBINÉES
             br
-            p Membre des Amis
+            p
+             span Plein tarif: 8.-
+             br
+             span Réduit : 6.-
+             br
+             span Jusqu’à 16 ans: entrée gratuite
+        .infos__row
+          .infos__column
+            h5 PERSONNES EN SITUATION DE HANDICAP
             br
-            p Jeunes, jusqu’à 18 ans et étudiants
-            br
-            p Groupes scolaires
-            br
-            p Chômeurs et AI
-            br
-            p ICOM, AICA
+            p
+             span Entrée gratuite pour l'accompagnateur
+
+        .infos__row.dropdown
+            h5.infos__title BÉNÉFICIAIRES ENTRÉE REDUITE
+            h5.infos__title.symbol ↓
+        .infos__row.dropdown
+            h5.infos__title GROUPES ET SCOLAIRES
+            h5.infos__title.symbol ↓
+        .infos__row.dropdown
+            h5.infos__title OFFRES POUR LES MEMBRES
+            h5.infos__title.symbol ↓
+
+        br
+        br
+        nuxt-link(
+      		to="#"
+      	)
+            .button-large.button.primary Réserver son billet
+        br
+        br
+
     .infos__row
       h3.infos__title ACCÈS
+
+
       .infos__content
-        p Gare CFF Lausanne, 3 minutes à pied
+        .infos__row
+          .infos__column
+            h5 MUSÉE PHOTO ELYSÉE
+            br
+            p
+              span Musée de photographie
+              br
+              span Place de la Gare 17
+              br
+              span CH-1003 Lausanne
+              br
+              span +41 21 315 25 30
+
+        .infos__row
+          .infos__column
+            h5 ACCÈS EN TRANSPORTS PUBLICS
+            br
+            p
+              span Bus : 1, 3, 21, arrêt "Gare"Bus : 6, arrêt "Cécil"
+              br
+              span Bus : 6, arrêt "Cécil"
+              br
+              span Métro : m2, arrêt "Gare"
+
+        .infos__row
+          .infos__column
+            h5 MOBILITÉ DOUCE
+            br
+            p
+             span Gare CFF Lausanne, 3 minutes à pied Chemin piéton et piste cyclable depuis l’avenue Marc-Dufour ; parcs à vélos sur le site
+        .infos__row
+          .infos__column
+            h5 ACCÈS EN VOITURE
+            br
+            p
+             span Parking Montbenon : à 300 mètres de l’entrée du MCBA, entrée au chemin de Mornex et avenue Jean-Jaques-Mercier. Réduction sur validation de votre ticket de parking à l’accueil du Musée Photo Elysée
+
         br
-        p Bus: 1, 3, 21, arrêt Gare
         br
-        p Bus: 6, arrêt Cécil
+        nuxt-link(
+      		to="#"
+      	)
+            .button-large.button Accès (Google map)
         br
-        p Métro: m2, arrêt Gare
         br
-        p Parking Montbenon: à 300 mètres de l’entrée du MCBA, entrée au chemin de Mornex et avenue Jean-Jaques-Mercier. Réduction sur validation de votre ticket de parking à l’accueil du MCBA
-        br
-        p Mobilité douce: ouverture sous peu d’un chemin piéton et d’une piste cyclable depuis l’avenue Marc-Dufour; parcs à vélos sur le site
-        br
-        p Musée de l’Elysée
-        br
-        p 18, avenue de l’Elysée
-        br
-        p 1014 Lausanne - Suisse
-        br
-        p Tél. +41 21 316 99 11
-        br
-        p Fax +41 21 316 99 12
-        br
-        p Mail info[at]elysee.ch
+
 </template>
 
 <script lang="ts">
