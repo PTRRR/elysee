@@ -81,8 +81,8 @@ p {
   margin-bottom: 1.5em;
 }
 
-.no-padding {
-  padding: 0 !important;
+.pt-0 {
+  padding-top: 0 !important;
 }
 
 .no-margin {

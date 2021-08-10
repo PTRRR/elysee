@@ -1,7 +1,9 @@
 <template lang="pug">
 div
-  .infos
-    img.infos__image(src='~static/img/collections.jpg')
+  grid(
+    :items="collectionsBanner"
+  )
+  .infos.pt-0
     .infos__content
       .infos__row
         h3.infos__title COLLECTIONS
@@ -34,7 +36,7 @@ div
   grid(
     :items="collections"
   )
-  .infos
+  .infos.pt-0
     .infos__content
       .infos__row
         h3.infos__title ACTUALITÉS
@@ -99,6 +101,7 @@ div
 <script lang="ts">
 import Vue from 'vue'
 import { collections } from '@/static/content/collections'
+import { collectionsBanner } from '@/static/content/collectionsBanner'
 import Grid from '@/components/Grid.vue'
 
 export default Vue.extend({
@@ -107,6 +110,7 @@ export default Vue.extend({
   data() {
     return {
       collections,
+      collectionsBanner,
     }
   },
 })

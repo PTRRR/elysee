@@ -66,6 +66,10 @@ export default Vue.extend({
       font-size: $main-font-size;
     }
 
+    #{$f}--medium & {
+      font-size: $medium-font-size;
+    }
+
     #{$f}--large & {
       font-size: 20vw;
       line-height: 0.85;

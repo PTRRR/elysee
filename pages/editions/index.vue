@@ -3,7 +3,7 @@ div
   grid(
     :items="editions"
   )
-  .infos.no-padding
+  .infos.pt-0
     .infos__content
       .infos__row
         h3.infos__title EDITIONS
@@ -27,17 +27,17 @@ div
           h5 N°8 René Burri
           h6 L’explosion du regard
           br
+          nuxt-link(
+        		to="/collections"
+        	)
+            h5 Voir la boutique
 
         .infos__content
           p Depuis 2016, le Musée de l’Elysée, les éditions Noir sur Blanc et les éditions Scheidegger & Spiess coéditent une collection de catalogues des expositions du musée. Depuis 2019, cette collection est exclusivement dédiée aux catalogues d’expositions réalisées à partir du fonds du Musée de l’Elysée. L’identité graphique cohérente et distinctive de la collection offre un écrin valorisant à chaque ouvrage, qu’il soit thématique ou monographique. Parmi les huit titres déjà parus dans cette collection, trois ont été distingués par le Deutscher Fotobuchpreis 2019/2020 et 2020/2021 dans leur version anglaise et allemande
           nuxt-link(
         		to="editions/collections"
         	)
-            .button-large.button Decouvrir toutes les éditions
-          nuxt-link(
-        		to="/collections"
-        	)
-            .button-large.button Voir la boutique
+            .button-large.button Decouvrir toutes les éditions collections
 
       .infos__row
         span.infos__title
@@ -50,17 +50,17 @@ div
           h5 Prix Elysée
           h6 Livre des nominés 2020-2022
           br
+          nuxt-link(
+        		to="/collections"
+        	)
+            h5 Voir la boutique
 
         .infos__content
           p Résultat d’un partenariat entre le Musée de l’Elysée et Parmigiani Fleurier, le Prix Elysée est un prix de soutien à la production dans le domaine de la photographie, qui offre une aide financière et un accompagnement muséal des artistes passionnés par la photographie et le livre, afin qu’ils puissent franchir une étape décisive dans leur carrière.
           nuxt-link(
         		to="#"
         	)
-            .button-large.button Decouvrir toutes les éditions
-          nuxt-link(
-        		to="#"
-        	)
-            .button-large.button Voir la boutique
+            .button-large.button Decouvrir toutes les éditions Prix Elysée
 
 </template>
 

@@ -200,7 +200,7 @@ export default Vue.extend({
 
   ul {
     list-style: none;
-    padding: #{4 * $main-padding} #{2 * $main-padding} 0;
+    padding: #{10 * $main-padding} #{2 * $main-padding} 0;
     margin: 0;
 
     li {
