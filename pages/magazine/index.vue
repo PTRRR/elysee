@@ -3,11 +3,10 @@
     grid(
       :items="magazine"
     )
-    grid.expositions(
+    grid.expositions.pt-0(
       :items="dossier"
     )
     .infos
-
       .infos__row
         h3.infos__title NEWSLETTER
         .infos__content
