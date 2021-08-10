@@ -26,7 +26,7 @@ export const magazine = [
     blocks: [
       {
         backgroundColor: '#1A1718',
-        text: "Laurence Hanna-Daher, <br>une nomade devenue l’une des <br>mémoires du Musée de l’Elysée» <h6><a href='/magazine'>Lire l'article</a></h6>",
+        text: "Laurence Hanna-Daher, <br>une nomade devenue l’une des <br>mémoires du Musée de l’Elysée» <h6><br/><a href='/magazine'>Lire l'article</a></h6>",
         title: 'Actualité',
         bottom: '01.02.2021',
       },

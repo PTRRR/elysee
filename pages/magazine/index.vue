@@ -6,7 +6,7 @@
     grid.expositions.pt-0(
       :items="dossier"
     )
-    .infos
+    .infos.pt-0
       .infos__row
         h3.infos__title NEWSLETTER
         .infos__content
