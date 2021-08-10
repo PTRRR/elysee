@@ -295,8 +295,8 @@ export default Vue.extend({
     margin: -1.25em 0;
   }
   &__text {
-    // padding-left: 1em;
-    // padding-right: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 
   p {

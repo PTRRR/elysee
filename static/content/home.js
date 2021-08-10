@@ -169,7 +169,7 @@ export const home = [
         type: 'sticky',
         backgroundColor: '#1B181A',
         //  img: 'img/image--37.jpg',
-        text: "<span><h2>MAGAZINE</h2></span><br><h5>Découvrez notre Magazine<br> lorem ipsum dolor sit amet<br> adipiscing elit.</h5><h5 class='content'><br><a href='/magazine'>Voir le magazine</a></h5>",
+        text: "<span><h2>MAGAZINE</h2></span><br><h6>Découvrez notre Magazine<br> lorem ipsum dolor sit amet<br> adipiscing elit.</h6><h6 class='content'><br><a href='/magazine'>Voir le magazine</a></h6>",
         typo: 'EX<br>PO<br>SI',
       },
       {
