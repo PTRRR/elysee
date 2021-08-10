@@ -96,8 +96,9 @@ div
         p Press Images. Courtesy Musée de l’Elysée, Lausanne et Galerie Polaris, Paris
         .button-large.button Voir le détail
 
-  .infos__row.dropdown h5.infos__title INFORMATIONS PRATIQUES
-  h5.infos__title.symbol ↓
+    .infos__row.dropdown
+      h5.infos__title INFORMATIONS PRATIQUES
+      h5.infos__title.symbol ↓
 
     .infos__row
       h5.infos__title
