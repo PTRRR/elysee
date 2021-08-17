@@ -6,15 +6,18 @@ export const expositions = [
         img: '/img/image--34.jpg',
         text: 'EN CE MOMENT',
         link: '#now',
+        bottom: '↓',
       },
       {
         img: '/img/image--30.jpg',
         text: 'À VENIR',
+        bottom: '↓',
       },
       {
         img: '/img/image--36.jpg',
         text: 'DANS <br>LE MONDE',
         link: '#world',
+        bottom: '↓',
       },
       {
         text: 'RÉSERVER<br> SON BILLET',

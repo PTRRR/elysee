@@ -1,4 +1,4 @@
-import { infos, bienvenue } from './writers'
+import { bienvenue } from './writers'
 
 export const home = [
   {
@@ -7,14 +7,12 @@ export const home = [
       {
         img: 'img/image--0.jpg',
         link: '/expositions',
-        text: 'EXPOSITIONS',
         // writer: membre
       },
       {
-        img: 'img/image--2.jpg',
+        img: 'img/image--28.jpg',
         credits: 'Saul Leiter, Postmen, 1952',
         link: '/infos',
-        writer: infos,
       },
       {
         img: 'img/image--6.jpg',
@@ -38,7 +36,7 @@ export const home = [
       {
         backgroundColor: 'hsl(322, 5%, 10%)',
         writer: bienvenue,
-        text: "<span class='content'><br>Place de la Gare 17, Lausanne</span><span class='content'><a href='infos'>Ouvert aujourd'hui de 9h à 18h </a></span>",
+        text: "<span class='content'><br>Place de la Gare 17, Lausanne <br> Ouvert aujourd'hui de 9h à 18h</span><span class='content'><a href='infos'>Voir les infos pratiques </a></span>",
         link: '/infos',
       },
       {

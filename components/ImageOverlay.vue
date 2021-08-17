@@ -8,11 +8,13 @@
     )
     span.label
       h2
-        span Martine Franck, Plage, village de Puri, Inde <br> 1980 © Martine Franck Magnum Photos. 
-        span
+        span Martine Franck, Plage, village de Puri, Inde <br> 1980 © Martine Franck Magnum Photos.
+        br
+        br
+        h6
           nuxt-link.opening(
             to="/collections/artwork/"
-          ) Voir le détail
+          ) Voir le détail →
 
 </template>
 

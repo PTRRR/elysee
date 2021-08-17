@@ -414,7 +414,6 @@ input {
   background: black;
   color: white;
   font-size: $main-font-size;
-  font-family: PhotoCText;
   font-weight: normal;
   padding: 0.5em;
 }

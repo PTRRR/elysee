@@ -66,7 +66,7 @@ export default Vue.extend({
 
   &__arrow {
     position: absolute;
-    bottom: 1rem;
+    bottom: 2.5rem;
     color: white;
     z-index: 1000;
     font-size: $main-font-size;
