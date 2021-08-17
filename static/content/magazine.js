@@ -75,7 +75,8 @@ export const magazine = [
     blocks: [
       {
         backgroundColor: '#1A1718',
-        text: "Instagram <h6><a href='/magazine'>Nous suivre</a></h6>",
+        text: 'Instagram',
+        title: 'Nous suivre',
       },
       {
         img: 'img/image--21.jpg',

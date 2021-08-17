@@ -37,9 +37,9 @@ export const home = [
     blocks: [
       {
         backgroundColor: 'hsl(322, 5%, 10%)',
-        title: "Aujourd'hui",
         writer: bienvenue,
-        text: "<span class='content'><br>Ouvert aujourd'hui <br />de 9h – 18h </span> <span class='content'> Place de la Gare 17 <br/> CH-1003 Lausanne </span>",
+        text: "<span class='content'><br>Place de la Gare 17, Lausanne</span><span class='content'><a href='infos'>Ouvert aujourd'hui de 9h à 18h </a></span>",
+        link: '/infos',
       },
       {
         img: 'img/image--9.jpg',
@@ -169,7 +169,7 @@ export const home = [
         type: 'sticky',
         backgroundColor: '#1B181A',
         //  img: 'img/image--37.jpg',
-        text: "<span><h2>MAGAZINE</h2></span><br><h6>Découvrez notre Magazine<br> lorem ipsum dolor sit amet<br> adipiscing elit.</h6><h6 class='content'><br><a href='/magazine'>Voir le magazine</a></h6>",
+        text: "<span><h2>MAGAZINE</h2></span><span class='content'>Découvrez notre Magazine<br> lorem ipsum dolor sit amet<br> adipiscing elit.</span><span class='content'><a href='/magazine'>Découvrir le magazine</a></span>",
         typo: 'EX<br>PO<br>SI',
       },
       {

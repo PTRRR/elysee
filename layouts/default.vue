@@ -57,6 +57,7 @@ h5,
 h6 {
   font-weight: normal;
   margin: 0;
+  text-transform: uppercase;
 }
 
 body,
@@ -128,6 +129,7 @@ img.half-width {
   // background: white;
   width: fit-content;
   margin-right: 2rem;
+  text-transform: uppercase;
 
   .icon {
     display: inline;

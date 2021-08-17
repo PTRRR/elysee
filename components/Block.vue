@@ -297,6 +297,7 @@ export default Vue.extend({
   &__text {
     padding-left: 0.5em;
     padding-right: 0.5em;
+    text-transform: uppercase;
   }
 
   p {
@@ -339,13 +340,14 @@ export default Vue.extend({
     margin-top: 1em;
     font-size: $desktop-font-size;
     padding: 0 2em;
+    text-transform: none;
   }
 
   @media screen and (max-width: $tablet-breakpoint) {
     &__bottom,
     &__credits,
     &__title {
-      font-size: $mobile-menu-font-size;
+      font-size: $desktop-font-size;
     }
   }
 }

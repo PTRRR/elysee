@@ -130,6 +130,13 @@ export default Vue.extend({
     background-position: center center;
   }
 
+  span.content {
+    display: block;
+    margin-top: 1em;
+    font-size: $desktop-font-size;
+    padding: 0 2em;
+  }
+
   @media screen and (max-width: $mobile-breakpoint) {
     flex-direction: column;
 
