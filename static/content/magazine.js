@@ -14,9 +14,11 @@ export const magazine = [
         title: 'Podcast audio',
       },
       {
-        text: 'FILTRER ↓',
+        text: '<select name="filter" class="dropdown"><option>Tous ↓</option><option>Actualité</option></select>',
         backgroundColor: 'hsl(326, 54%, 85%)',
         color: 'black',
+        title: 'Filtrer',
+        type: 'dropdown',
       },
     ],
   },
@@ -29,6 +31,7 @@ export const magazine = [
         text: "Laurence Hanna-Daher, <br>une nomade devenue l’une des <br>mémoires du Musée de l’Elysée» <h6><br/><a href='/magazine'>Lire l'article</a></h6>",
         title: 'Actualité',
         bottom: '01.02.2021',
+        type: 'content',
       },
       {
         img: 'img/image--17.jpg',

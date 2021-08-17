@@ -406,4 +406,32 @@ input {
 .no-padding {
   padding-top: 0 !important;
 }
+.back-to-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  background: black;
+  color: white;
+  font-size: $main-font-size;
+  font-family: PhotoCText;
+  font-weight: normal;
+  padding: 0.5em;
+}
+
+select.dropdown {
+  // A reset of styles, including removing the default dropdown arrow
+  appearance: none;
+  // Additional resets for further consistency
+  background-color: transparent;
+  border: none;
+  padding: 2em;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  text-transform: uppercase;
+  text-align-last: center;
+}
 </style>

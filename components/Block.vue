@@ -167,13 +167,16 @@ export default Vue.extend({
       this.isVisible = visible
     },
 
-    onClick(action: string) {
+    onClick() {
       // TODO: Choose between those two behaviour
 
       // Credits
       // this.showCredits = !this.showCredits
-
-      if (action === 'anchor') {
+      if (
+        this.type === 'anchor' ||
+        this.type === 'dropdown' ||
+        this.type === 'content'
+      ) {
         // const targetDiv = this.$refs[this.target]
         // if (targetDiv)
         // window.scrollTo(0, targetDiv.offsetTop);

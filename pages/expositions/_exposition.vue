@@ -1,5 +1,6 @@
 <template lang="pug">
 div
+  .back-to-top ↑
   .exposition
     swiper.exposition__slider(
       :options="swiperOptions"
