@@ -10,6 +10,9 @@
       v-if="text"
       v-html="text"
     )
+    span.full-block__arrow(
+      v-if="mode=='banner'"
+    ) ↓
 </template>
 
 <script lang="ts">
@@ -30,11 +33,16 @@ export default Vue.extend({
       type: String,
       default: 'large',
     },
+
+    mode: {
+      type: String,
+      default: 'section',
+    },
   },
 
   computed: {
     fullBlockCssClasses() {
-      return [`full-block--${this.fontSize}`]
+      return [`full-block--${this.fontSize} ${this.mode}`]
     },
   },
 })
@@ -45,6 +53,7 @@ export default Vue.extend({
   $f: &;
   width: 100vw;
   margin: $main-padding 0;
+  position: relative;
 
   img {
     position: sticky;
@@ -55,12 +64,23 @@ export default Vue.extend({
     display: block;
   }
 
+  &__arrow {
+    position: absolute;
+    bottom: 1rem;
+    color: white;
+    z-index: 1000;
+    font-size: $main-font-size;
+    width: 100%;
+    text-align: center;
+  }
+
   &__overlay {
     position: relative;
     color: white;
     text-align: center;
     display: block;
     padding-bottom: 100vh;
+    margin: auto;
 
     #{$f}--small & {
       font-size: $main-font-size;
@@ -82,6 +102,19 @@ export default Vue.extend({
     line-height: normal;
     width: 75%;
     margin: 1em auto;
+  }
+}
+
+.banner {
+  .full-block__overlay {
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

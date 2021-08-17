@@ -4,5 +4,6 @@ export const collectionsBanner = [
     img: 'img/collections.jpg',
     text: 'Collections',
     fontSize: 'medium',
+    mode: 'banner',
   },
 ]
