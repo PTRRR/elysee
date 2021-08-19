@@ -135,8 +135,8 @@ export const expositions = [
     blocks: [
       {
         backgroundColor: '#1B181A',
-        text: 'Dans le monde',
         refTarget: 'world',
+        img: '/img/map.png',
       },
     ],
   },
