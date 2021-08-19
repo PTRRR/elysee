@@ -24,7 +24,7 @@ div
           p Depuis 2016, le Musée de l’Elysée, les éditions Noir sur Blanc et les éditions Scheidegger & Spiess coéditent une collection de catalogues des expositions du musée. Depuis 2019, cette collection est exclusivement dédiée aux catalogues d’expositions réalisées à partir du fonds du Musée de l’Elysée. L’identité graphique cohérente et distinctive de la collection offre un écrin valorisant à chaque ouvrage, qu’il soit thématique ou monographique. Parmi les huit titres déjà parus dans cette collection, trois ont été distingués par le Deutscher Fotobuchpreis 2019/2020 et 2020/2021 dans leur version anglaise et allemande
 
           nuxt-link(
-        		to="#"
+        		to="/editions/edition"
         	)
             .button-large.button Voir la boutique
 

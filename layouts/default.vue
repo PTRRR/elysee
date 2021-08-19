@@ -262,6 +262,7 @@ input {
     font-family: PhotoC;
     line-height: 0.9;
     margin-bottom: -0.2em;
+    padding-right: 0.2em;
 
     img {
       max-height: 500px;
