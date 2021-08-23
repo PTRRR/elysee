@@ -7,7 +7,7 @@
       :src="imageOverlaySource"
     )
     span.label
-      h2
+      h5
         span Martine Franck, Plage, village de Puri, Inde <br> 1980 © Martine Franck Magnum Photos.
         br
         br
@@ -106,7 +106,7 @@ export default Vue.extend({
 @media screen and (max-width: $mobile-breakpoint) {
   .image-overlay {
     .label {
-      font-size: $small-font-size;
+      font-size: $headlines-small;
     }
   }
 }

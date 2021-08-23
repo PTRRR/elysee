@@ -13,6 +13,8 @@
           p Restez au courant de l’actualité de l’Elysée en vous abonnant à notre newsletter mensuelle.
           input(type="text" name="year" placeholder="Email")
           input.button-large(type="submit" name="year" placeholder="Email")
+          br
+          br
 
 </template>
 

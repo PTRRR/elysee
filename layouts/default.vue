@@ -64,7 +64,7 @@ body,
 html {
   font-family: PhotoC, Helvetica, Arial, sans-serif;
   margin: 0;
-  font-size: $desktop-font-size;
+  //font-size: $desktop-font-size;
 }
 
 a {
@@ -102,7 +102,7 @@ img.half-width {
 @media screen and (max-width: $tablet-breakpoint) {
   body,
   html {
-    font-size: $mobile-font-size;
+    //font-size: $mobile-font-size;
   }
 }
 
@@ -162,7 +162,7 @@ img.half-width {
 .button-large {
   display: inline-block;
   font-size: $desktop-font-size;
-  padding: 0.75em 1.5em;
+  padding: $main-padding * 3;
 }
 
 .button.menu-button {
@@ -178,7 +178,6 @@ img.half-width {
 
   h3 {
     color: white;
-    font-size: $large-font-size;
     height: inherit;
   }
 }
@@ -197,19 +196,18 @@ input {
   box-shadow: none;
   -webkit-appearance: none;
   border: 1px solid #000;
-  font-size: $desktop-font-size;
-  padding: 0.75em 1.5em;
-  border-right: none;
+  font-size: $headlines-xsmall;
+  padding: $main-padding * 3;
   border-radius: 0;
   font-family: PhotoC;
+  background: white;
 }
 
 .infos {
   $i: &;
   display: flex;
   flex-direction: column;
-  padding: calc(#{$desktop-menu-top-bar-height} - #{$main-padding})
-    $main-padding * 2;
+  padding: 0 $main-padding * 2;
 
   &__image {
     height: calc(75vh - #{$desktop-menu-top-bar-height} - #{$main-padding});
@@ -219,7 +217,7 @@ input {
 
   &__row {
     display: flex;
-    padding: 1.5em 0 3em 0;
+    padding: 0.5em 0 3em 0;
 
     #{$i}__row {
       padding: 1em 0;
@@ -234,11 +232,11 @@ input {
     }
 
     & + & {
-      border-top: solid 0.15em black;
+      border-top: solid 1px black;
     }
 
     &:last-child {
-      padding-bottom: 0;
+      // padding-bottom: 0;
     }
 
     img {
@@ -258,7 +256,6 @@ input {
 
   &__title {
     margin: 0;
-    font-size: $main-font-size;
     font-family: PhotoC;
     line-height: 0.9;
     margin-bottom: -0.2em;
@@ -393,13 +390,9 @@ input {
 
 .message-info {
   //border: solid 0.05em black;
-  padding: 2.5rem;
+  padding: 1rem;
   background-color: #1a1718;
   color: white;
-
-  p {
-    font-size: $secondary-font-size;
-  }
 }
 .right {
   float: right;
@@ -409,14 +402,15 @@ input {
 }
 .back-to-top {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 1rem;
+  right: 1rem;
   z-index: 1000;
   background: black;
   color: white;
-  font-size: $main-font-size;
+  font-size: $headlines-medium;
   font-weight: normal;
-  padding: 0.5em;
+  padding: $main-padding * 2 $main-padding * 4;
+  border-radius: 100px;
 }
 
 select.dropdown {

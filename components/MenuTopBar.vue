@@ -88,7 +88,7 @@ export default Vue.extend({
 
 <style lang="scss">
 .menu-top-bar {
-  padding: 0 $main-padding * 2;
+  padding: $main-padding * 2 $main-padding * 2 0.3rem $main-padding * 2;
   display: flex;
   position: fixed;
   text-transform: uppercase;
@@ -97,10 +97,10 @@ export default Vue.extend({
   width: 100%;
   z-index: 100;
   background-color: white;
-  height: $desktop-menu-top-bar-height;
+  // height: $desktop-menu-top-bar-height;
   line-height: 1;
   transition: transform $transition-duration $easing;
-  font-size: $desktop-font-size;
+  font-size: $headlines-xsmall;
   align-items: center;
 
   a {
@@ -116,7 +116,6 @@ export default Vue.extend({
     width: 50%;
     white-space: nowrap;
     padding-left: 1.4em;
-    margin-top: 0.2em;
   }
 
   &__home {
@@ -129,8 +128,8 @@ export default Vue.extend({
     span {
       display: block;
       width: 50%;
-      margin-bottom: -0.4em;
       white-space: nowrap;
+      // padding: 0.5rem 0 0.3rem 0;
 
       br {
         display: none;
@@ -171,7 +170,7 @@ export default Vue.extend({
   &__burger {
     cursor: pointer;
     width: 1.2em;
-    height: 1em;
+    height: 0.9em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -185,7 +184,7 @@ export default Vue.extend({
 
   @media screen and (max-width: $mobile-breakpoint) {
     height: $mobile-menu-top-bar-height;
-    font-size: $mobile-menu-font-size;
+    font-size: $headlines-xsmall;
 
     &__home {
       span {

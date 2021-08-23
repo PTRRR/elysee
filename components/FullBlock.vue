@@ -83,15 +83,15 @@ export default Vue.extend({
     margin: auto;
 
     #{$f}--small & {
-      font-size: $main-font-size;
+      font-size: $headlines-large;
     }
 
     #{$f}--medium & {
-      font-size: $medium-font-size;
+      font-size: $headlines-xlarge;
     }
 
     #{$f}--large & {
-      font-size: 20vw;
+      font-size: $headlines-xlarge;
       line-height: 0.85;
     }
   }

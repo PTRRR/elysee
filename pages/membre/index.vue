@@ -4,8 +4,7 @@ div
     img.infos__image(src='~static/img/image--33.jpg')
     .infos__row
       .infos__title
-        h5 NOUS SOUTENIR
-        br
+        h2 NOUS SOUTENIR
 
     ul.infos__links
       h5 Programmes de membership
@@ -19,18 +18,18 @@ div
         .button-large.button Faire un don
 
     .infos__row
-      h5.infos__title
+      h3.infos__title
         span LES AMIS
 
       .infos__content
         p Devenez membre et participez à la vie d’une institution culturelle lausannoise de renommée internationale. Marquez votre soutien au Musée de l’Elysée et faites vivre son héritage exceptionnel. Ensemble, partageons et développons notre passion commune pour la photographie.
 
     .infos__row.dropdown
-      h5.infos__title MEMBRES ET DONATEURS DU CLUB 2019
-      h5.infos__title.symbol ↓
+      h3.infos__title MEMBRES ET DONATEURS DU CLUB 2019
+      h3.infos__title.symbol ↓
 
     .infos__row
-      h5.infos__title
+      h3.infos__title
         span LES AVANTAGES POUR LES MEMBRES
 
   .table
@@ -86,7 +85,7 @@ div
 
   .infos
     .infos__row
-      h5.infos__title
+      h3.infos__title
         span SOUTIENS PRIVÉS, MÉCÈNES ET INSTITUTIONNELS
 
       .infos__content
@@ -131,7 +130,7 @@ export default Vue.extend({
 ================================== */
 .table {
   padding-left: 0.5rem;
-  font-size: $desktop-font-size;
+  font-size: $main-font-size;
   font-family: PhotoCText;
   width: 100vw;
   overflow-x: auto;
@@ -140,19 +139,22 @@ export default Vue.extend({
 .Rtable {
   display: flex;
   //flex-wrap: wrap;
-  background: rgb(241, 241, 241);
   flex-wrap: nowrap;
   min-width: 125vw;
   //margin: 0 0 3em 0;
 }
+.Rtable:first-child {
+  border-bottom: 1px solid black;
+}
 .Rtable:nth-child(even) {
   background: none;
+
   //margin: 0 0 3em 0;
 }
 .Rtable-cell {
   box-sizing: border-box;
   flex-grow: 1;
-  padding: 0.8em 1.2em;
+  padding: $main-padding * 2 0;
   overflow: hidden;
   list-style: none;
   align-items: center;
@@ -190,7 +192,7 @@ export default Vue.extend({
 
 @media screen and (max-width: $mobile-breakpoint) {
   .table {
-    font-size: $mobile-menu-font-size;
+    font-size: $main-font-size;
   }
 }
 </style>

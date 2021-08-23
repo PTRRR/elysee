@@ -103,7 +103,7 @@ export default Vue.extend({
 
   &__text {
     color: inherit;
-    font-size: $main-font-size;
+    font-size: $headlines-small;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
@@ -133,7 +133,7 @@ export default Vue.extend({
   span.content {
     display: block;
     margin-top: 1em;
-    font-size: $desktop-font-size;
+    font-size: $headlines-xsmall;
     padding: 0 2em;
   }
 

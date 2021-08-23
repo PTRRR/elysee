@@ -6,7 +6,7 @@ div
       img.artwork(src='~static/img/image--7.jpg')
 
       .infos__row
-        h3.infos__title Jean Tinguely, "Le Cyclope" <br> Milly-la-Forêt, France
+        h2.infos__title Jean Tinguely, "Le Cyclope" <br> Milly-la-Forêt, France
           p
             h5 René Burri (1933 - 2014)
           p

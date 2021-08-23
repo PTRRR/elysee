@@ -22,7 +22,7 @@ export default Vue.extend({})
   width: 100%;
   z-index: 100;
   //height: $desktop-menu-top-bar-height;
-  font-size: $desktop-font-size;
+  font-size: $headlines-xsmall;
   align-items: center;
 
   span {

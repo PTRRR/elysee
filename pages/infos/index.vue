@@ -4,7 +4,7 @@
   img.infos__image(src='~static/img/musee.jpg')
   .infos__content
     .infos__row
-      h3.infos__title INFORMATIONS PRATIQUES
+      h2.infos__title INFORMATIONS PRATIQUES
       .infos__content
         p Le Musée de l’Elysée est temporairement fermé pour organiser son déménagement à PLATEFORME 10, le nouveau quartier des arts de Lausanne. La cérémonie de remise des clés du nouveau bâtiment du Musée de l'Elysée et du mudac aura lieu du 4 au 7 novembre 2021. L’inauguration des espaces d'exposition est prévue pour juin 2022. D'ici là, suivez l'actualité du musée sur L'Elysée hors champ et sur nos réseaux sociaux !
     .infos__row
@@ -24,7 +24,7 @@
     .infos__row
       h3.infos__title TARIFS
       .infos__content
-        .infos__row
+        .infos__row.no-padding
           .infos__column
             h5 EXPOSITION PERMANENTE
             br

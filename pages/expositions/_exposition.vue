@@ -98,11 +98,11 @@ div
         .button-large.button Voir le détail
 
     .infos__row.dropdown
-      h5.infos__title INFORMATIONS PRATIQUES
-      h5.infos__title.symbol ↓
+      h3.infos__title INFORMATIONS PRATIQUES
+      h3.infos__title.symbol ↓
 
     .infos__row
-      h5.infos__title
+      h3.infos__title
         span VIDEOS
 
       .infos__content
@@ -112,7 +112,7 @@ div
         p Description vidéo
 
     .infos__row
-      h5.infos__title
+      h3.infos__title
         span PODCASTS
 
       .infos__content
@@ -134,7 +134,7 @@ div
             p.no-margin Description
 
     .infos__row
-      h5.infos__title
+      h3.infos__title
         span RESSOURCES
 
       .infos__content
@@ -149,22 +149,15 @@ div
             h5 Applications d’aide à la visite
 
     .infos__row
-      h5.infos__title
+      h3.infos__title
         span CATALOGUE
 
-      .infos__content.catalogue
-          .infos__row.no-padding
-            .column
-              img(
-                src="~static/img/image--35.jpg"
-  							class="half-width"
-              )
-            .column
-              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a tellus tempor
-              .button-large.button Voir la boutique
+      .infos__content
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a tellus tempor
+          .button-large.button Voir la boutique
 
     .infos__row
-      h5.infos__title
+      h3.infos__title
         span CATALOGUE
 
       .infos__content
@@ -196,7 +189,7 @@ div
               h5 Fisheye
 
     .infos__row
-      h5.infos__title
+      h3.infos__title
         span CONTENU POUR <br> LES MÉDIATEURS
 
       .infos__content
@@ -204,7 +197,7 @@ div
         .button-large.button Télécharger le PDF
 
     .infos__row
-      h5.infos__title
+      h3.infos__title
         span AUTOUR DE L'EXPOSITION
     grid.expositions(
       :items="around"
@@ -250,8 +243,9 @@ export default Vue.extend({
 .exposition {
   //padding: 2 * $small-font-size $main-padding * 2;
   //padding: calc(#{$desktop-menu-top-bar-height} - #{$main-padding}) $main-padding * 2;
-  padding: calc(#{$desktop-menu-top-bar-height} - #{$main-padding})
-    $main-padding * 2 $main-padding * 2;
+  // padding: calc(#{$desktop-menu-top-bar-height} - #{$main-padding})
+  //   $main-padding * 2 $main-padding * 2;
+  padding: 0 $main-padding * 2 0 $main-padding * 2;
 
   @media screen and (max-width: $mobile-breakpoint) {
     padding: calc(#{$desktop-menu-top-bar-height} - #{$main-padding})
@@ -307,7 +301,7 @@ export default Vue.extend({
 
   &__text {
     font-family: PhotoCText;
-    font-size: $small-font-size;
+    // font-size: $small-font-size;
 
     p {
       margin: 0;
@@ -315,7 +309,7 @@ export default Vue.extend({
     }
 
     p + p {
-      margin-top: $small-font-size;
+      // margin-top: $small-font-size;
     }
   }
 
@@ -323,7 +317,7 @@ export default Vue.extend({
     line-height: 0.9;
 
     & > * {
-      font-size: $main-font-size;
+      font-size: $main-paragraph;
       margin: 0;
     }
   }

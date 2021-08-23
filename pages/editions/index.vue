@@ -6,7 +6,7 @@ div
   .infos.pt-0
     .infos__content
       .infos__row
-        h3.infos__title EDITIONS
+        h2.infos__title EDITIONS
         .infos__content
           h5 Le Musée de l’Elysée détient une collection unique couvrant toute l’histoire de l’art photographique et ses aspects les plus divers.
           br

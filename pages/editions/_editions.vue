@@ -4,7 +4,7 @@ div
     img.infos__image(src='~static/img/edition--1.jpg')
     .infos__content
       .infos__row
-        h3.infos__title Collection Musée de l’Elysée
+        h2.infos__title Collection Musée de l’Elysée
         .infos__content
           p Fondé en 1985 en tant que musée «pour la photographie», il s’interroge sur la photographie et la fait connaître à un large public grâce à des expositions innovantes, à Lausanne et dans le monde lors de leur itinérance. Pôle d’excellence dans la conservation et la valorisation du patrimoine visuel, le Musée de l’Elysée détient une collection unique de plus d’un million d’objets photographiques. Les éditions du Musée de l’Elysée se font le prolongement des expositions du musée et accompagnent l’ensemble de ses activités par des publications de référence. Elles éditent également des ouvrages au corpus inédit, tels que les livres des nominés et du lauréat du Prix Elysée.
 

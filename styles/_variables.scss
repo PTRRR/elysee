@@ -1,17 +1,15 @@
 $desktop-font-size: 20px;
 $mobile-font-size: 10px;
 $mobile-menu-font-size: $mobile-font-size * 1.5;
-$main-padding: 0.25rem;
-$big-font-size: 25vw;
-$medium-font-size: 16vw;
-$main-font-size: 3.5em;
-$secondary-font-size: 1.75em;
-$small-font-size: 1em;
-$large-font-size: 7em;
+$main-padding: 0.25rem; // $big-font-size: 25vw;
+// $medium-font-size: 16vw;
+// $main-font-size: 3.5em;
+// $secondary-font-size: 1.75em;
+// $small-font-size: 1em;
+// $large-font-size: 7em;
 $desktop-menu-top-bar-height: $desktop-font-size * 2;
 $mobile-menu-top-bar-height: $mobile-menu-font-size * 3;
 $tablet-breakpoint: 2400px; //$tablet-breakpoint: 1400px;
-$mobile-breakpoint: 800px;
+$mobile-breakpoint: 960px;
 $transition-duration: 0.3s;
-$easing: ease-in-out;
-// colors
+$easing: ease-in-out; // colors

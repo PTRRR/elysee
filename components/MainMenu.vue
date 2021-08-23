@@ -21,7 +21,7 @@
     .infos.tickets
       br
       .button-large.button.primary Réserver son billet
-      h3
+      h5
         span Ouvert aujourd'hui <br>de 8h à 19h
 
 </template>
@@ -97,12 +97,16 @@ const lists = [
     class: 'menu__secondary-sections',
     items: [
       {
-        name: 'English',
+        name: 'Français',
         link: '#',
         state: 'active',
       },
       {
-        name: 'German',
+        name: 'English',
+        link: '#',
+      },
+      {
+        name: 'Deustch',
         link: '#',
       },
     ],
@@ -168,10 +172,10 @@ export default Vue.extend({
 <style lang="scss">
 .menu {
   position: fixed;
-  top: $desktop-menu-top-bar-height;
+  // top: $headlines-xsmall * 1.75;
   left: 0;
   width: 100%;
-  height: calc(100% - #{$desktop-menu-top-bar-height});
+  height: 100vh;
   z-index: 100;
   /* padding: 0 #{2 * $main-padding} #{2 * $main-padding}; */
   background-color: rgba($color: #ffffff, $alpha: 0.95);
@@ -186,10 +190,6 @@ export default Vue.extend({
     align-items: center;
   }
 
-  h3 {
-    font-size: $secondary-font-size;
-  }
-
   &--show {
     opacity: 1;
     pointer-events: initial;
@@ -197,16 +197,20 @@ export default Vue.extend({
   a {
     text-decoration: none;
   }
+  a.active {
+    color: #666;
+  }
 
   ul {
     list-style: none;
-    padding: #{10 * $main-padding} #{2 * $main-padding} 0;
+    padding: $main-padding * 4 #{2 * $main-padding} 0;
     margin: 0;
 
     li {
       text-transform: uppercase;
       cursor: pointer;
       user-select: none;
+      line-height: 1;
     }
 
     li:hover {
@@ -215,26 +219,11 @@ export default Vue.extend({
   }
 
   &__main-sections {
-    font-size: $main-font-size;
+    font-size: $headlines-large;
   }
 
   &__secondary-sections {
-    font-size: $secondary-font-size;
-  }
-
-  @media screen and (max-width: $tablet-breakpoint) {
-    &__secondary-sections {
-      font-size: $secondary-font-size;
-      li {
-        margin-top: 0.25em;
-      }
-    }
-  }
-
-  @media screen and (max-width: $mobile-breakpoint) {
-    font-size: $mobile-font-size;
-    top: $mobile-menu-top-bar-height;
-    height: calc(100% - #{$mobile-menu-top-bar-height});
+    font-size: $headlines-small;
   }
 }
 </style>

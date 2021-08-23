@@ -6,7 +6,7 @@ div
       img.artwork(src='~static/img/image--24.jpg')
 
       .infos__row
-        h3.infos__title L’explosion du regard
+        h2.infos__title L’explosion du regard
           p
             h5 N°8 René Burri
 

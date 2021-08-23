@@ -124,7 +124,7 @@ export const home = [
       },
       {
         img: 'img/image--14.jpg',
-        text: '<h2>AGENDA</h2>',
+        text: 'AGENDA',
       },
     ],
   },

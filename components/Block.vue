@@ -251,24 +251,22 @@ export default Vue.extend({
     left: 50%;
     color: white;
     text-align: center;
-    font-size: $small-font-size;
+    font-size: $headlines-xsmall;
     width: 100%;
-    padding: $small-font-size;
     text-transform: uppercase;
   }
 
   &__bottom {
     position: absolute;
-    bottom: 0;
+    bottom: $main-padding * 2;
     color: white;
-    font-size: $small-font-size;
+    font-size: $headlines-xsmall;
     width: 100%;
-    padding: $small-font-size;
     text-align: center;
   }
 
   &__title {
-    top: 0;
+    top: $main-padding * 2;
     transform: translate(-50%, 0%);
   }
 
@@ -289,7 +287,7 @@ export default Vue.extend({
     position: relative;
     color: white;
     text-align: center;
-    font-size: $main-font-size;
+    font-size: $headlines-small;
     line-height: 0.85;
     width: 100%;
     overflow: hidden;
@@ -304,12 +302,12 @@ export default Vue.extend({
   }
 
   p {
-    font-size: $desktop-font-size;
+    font-size: $main-paragraph;
     padding: 0 1em;
   }
 
   &__typo {
-    font-size: $big-font-size;
+    font-size: $headlines-bloc;
     line-height: 0.8;
     margin-bottom: -1.22em;
   }
@@ -341,7 +339,7 @@ export default Vue.extend({
   span.content {
     display: block;
     margin-top: 1em;
-    font-size: $desktop-font-size;
+    font-size: $headlines-xsmall;
     padding: 0 2em;
     text-transform: none;
   }
@@ -350,7 +348,7 @@ export default Vue.extend({
     &__bottom,
     &__credits,
     &__title {
-      font-size: $desktop-font-size;
+      font-size: $headlines-xsmall;
     }
   }
 }

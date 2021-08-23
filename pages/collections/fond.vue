@@ -43,11 +43,9 @@ div
     .infos__content
       .infos__row
           .infos__title
-            h3 Fonds De Jongh (Frères De Jongh, Edouard, Francis II, Gaston)
+            h2 Fonds De Jongh (Frères De Jongh, Edouard, Francis II, Gaston)
             br
             p Date de rédaction : 2 octobre 2018
-
-
 
           .infos__content
             p Originaire des Pays-Bas, la famille de Jongh arrive en Suisse en 1793. Edouard (1823-1886) et Francis I (1833-1912) sont les premiers de leur famille à s'intéresser au commerce de la photographie et ouvrent ainsi la voie à plusieurs générations de photographes professionnels. Francis I s'installe à Vevey en 1865 et Edouard s'installe à Lausanne en 1867. L'atelier de l'avenue du Théâtre ouvre en 1877. Francis III (1864-1928) reprend l'atelier familial en 1886. Il le transfert à son fils Gaston (1888-1973) dès 1918
@@ -207,7 +205,7 @@ export default Vue.extend({
 
   &__text {
     font-family: PhotoCText;
-    font-size: $small-font-size;
+    // font-size: $small-font-size;
 
     p {
       margin: 0;
@@ -215,7 +213,7 @@ export default Vue.extend({
     }
 
     p + p {
-      margin-top: $small-font-size;
+      margin-top: $main-padding * 2;
     }
   }
 

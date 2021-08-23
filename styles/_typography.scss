@@ -1,0 +1,51 @@
+$main-font-size: 100%; //16px
+$main-paragraph: 1.25rem; //20px
+$headlines-xsmall: 1.25rem; //20px
+$headlines-small: 1.75rem; //28px
+$headlines-medium: 2.5rem; //40px
+$headlines-large: 4rem; //112px
+$headlines-xlarge: 16vw;
+$headlines-bloc: 25vw;
+
+html {
+  font-size: $main-font-size;
+}
+
+h1 {
+  font-size: $headlines-large;
+}
+
+h2 {
+  font-size: $headlines-medium;
+}
+
+h3 {
+  font-size: $headlines-small;
+}
+
+h4 {
+  font-size: $headlines-small;
+}
+
+h5 {
+  font-size: $headlines-xsmall;
+}
+
+h6 {
+  font-size: $headlines-xsmall;
+}
+@media (min-width: 480px) {
+  html {
+    font-size: $main-font-size*0.75;
+  }
+}
+@media (min-width: $mobile-breakpoint) {
+  html {
+    font-size: $main-font-size;
+  }
+}
+@media (min-width: 1280px) {
+  html {
+    font-size: $main-font-size*1.25;
+  }
+}
