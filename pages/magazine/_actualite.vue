@@ -1,8 +1,8 @@
 <template lang="pug">
 div
   .infos
-    img.infos__image(src='~static/img/actualite--0.jpg')
     .infos__content
+      img.artwork(src='~static/img/actualite--0.jpg')
       .infos__row
         .infos__title
           h2 Vos plus beaux souvenirs de la Nuit des images

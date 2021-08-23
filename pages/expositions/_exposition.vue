@@ -107,7 +107,7 @@ div
 
       .infos__content
         .player(style='background-image:url(/public/static/img/image--1.jpg)')
-          h3.absolute-center PLAY
+          h2.absolute-center PLAY
         h5 Titre vidéo
         p Description vidéo
 

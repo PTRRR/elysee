@@ -20,7 +20,7 @@ export const dossier = [
             // img: '/img/image--3.jpg'
             title: 'Editions',
             backgroundColor: '#1A1718',
-            text: '<h6>Les musées à l’ère <br>du «tous photographes»</h6>',
+            text: 'Les musées à l’ère <br>du «tous photographes»',
           },
           {
             img: '/img/image--4.jpg',
@@ -60,14 +60,14 @@ export const dossier = [
             // img: '/img/image--3.jpg'
             title: 'Editions',
             backgroundColor: '#1A1718',
-            text: '<h6>Philippe Bischof: «Penser un lieu culturel au pluriel»</h6>',
+            text: 'Philippe Bischof: «Penser un lieu culturel au pluriel»',
           },
         ],
       },
       {
         type: 'sticky',
         backgroundColor: 'hsl(164, 51%, 81%)',
-        text: 'Dossier<br>Thématique',
+        text: 'Dossier Thématique',
         color: 'black',
       },
     ],

@@ -85,6 +85,9 @@ p {
 .pt-0 {
   padding-top: 0 !important;
 }
+.mr-1 {
+  margin-right: 1rem;
+}
 
 .no-margin {
   margin: 0 !important;
@@ -217,7 +220,7 @@ input {
 
   &__row {
     display: flex;
-    padding: 0.5em 0 3em 0;
+    padding: 0.5em 0 1.5em 0;
 
     #{$i}__row {
       padding: 1em 0;
@@ -427,5 +430,36 @@ select.dropdown {
   line-height: inherit;
   text-transform: uppercase;
   text-align-last: center;
+}
+
+.filter {
+  display: inline-block;
+  font-size: $headlines-xsmall;
+  margin-right: 1rem;
+  cursor: pointer;
+  border: solid 1px black;
+  // background: white;
+  padding: $main-padding * 2.5;
+  width: fit-content;
+  margin-right: $main-padding * 2;
+  margin-bottom: $main-padding * 2;
+  border-radius: 2rem;
+}
+.filter.active {
+  background: #666;
+  color: white;
+  border: 0px;
+}
+
+.pagination {
+  margin: $main-padding * 2 auto;
+  li {
+    display: inline-block;
+    padding: $main-padding * 4;
+  }
+  li.active {
+    color: 666;
+    border-bottom: 1px solid black;
+  }
 }
 </style>

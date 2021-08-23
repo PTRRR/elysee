@@ -8,8 +8,8 @@ export const collections = [
         // title: '10.01.2021 – 15h00'
       },
       {
-        img: '/img/image--32.jpg',
-        text: 'ARCHIVES',
+        img: '/img/image--33.jpg',
+        text: 'TOUTES LES OEUVRES',
         // title: '10.01.2021 – 15h00'
       },
     ],

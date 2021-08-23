@@ -63,7 +63,7 @@ export default Vue.extend({
 
 <style lang="scss">
 .artwork {
-  max-width: 75%;
-  height: 75vh;
+  max-width: 75vw;
+  max-height: 75vh;
 }
 </style>

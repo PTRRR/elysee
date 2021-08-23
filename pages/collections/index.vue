@@ -31,7 +31,7 @@ div
           nuxt-link(
         		to="collections/artwork/"
         	)
-            .button-large.button Toutes les oeuvres
+            .button-large.button Voir le détail
 
   grid(
     :items="collections"

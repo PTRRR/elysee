@@ -14,10 +14,9 @@ export const magazine = [
         title: 'Podcast audio',
       },
       {
-        text: '<select name="filter" class="dropdown"><option>Tous ↓</option><option>Actualité</option></select>',
+        text: '<select name="filter" class="dropdown"><option>Découvrir ↓</option><option>Actualités</option><option>Podcasts</option></select>',
         backgroundColor: 'hsl(326, 54%, 85%)',
         color: 'black',
-        title: 'Filtrer',
         type: 'dropdown',
       },
     ],
@@ -52,7 +51,7 @@ export const magazine = [
       {
         img: 'img/image--22.jpg',
         title: 'Actualité',
-        text: '<h6>Philippe Bischof: <br> «Penser un lieu culturel <br> au pluriel»</h6>',
+        text: 'Philippe Bischof: <br> «Penser un lieu culturel <br> au pluriel»',
       },
       {
         img: 'img/image--14.jpg',
@@ -68,7 +67,7 @@ export const magazine = [
       {
         backgroundColor: '#1A1718',
         title: 'Actualité',
-        text: '<h6>Les musées à l’ère du<br> «tous photographes»</h6>',
+        text: 'Les musées à l’ère du<br> «tous photographes',
         bottom: '01.02.2021',
       },
     ],
