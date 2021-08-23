@@ -44,6 +44,5 @@ export default Vue.extend({
 .grid {
   display: flex;
   flex-direction: column;
-  padding-top: 1rem;
 }
 </style>
