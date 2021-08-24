@@ -83,7 +83,7 @@ div
         p Au-delà de ce regard inédit d’une photographe sur l’ensemble de son œuvre, ce projet d’exposition et d’édition est fondé sur une étude approfondie des archives de Martine Franck, ce qui lui permet de se démarquer des rétrospectives précédentes.
         .button-large.button
           span Continuer la lecture
-          .icon ↓
+          .icon +
 
     .infos__row
       span.infos__title

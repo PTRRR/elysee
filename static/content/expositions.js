@@ -11,12 +11,13 @@ export const expositions = [
       {
         img: '/img/image--30.jpg',
         text: 'À VENIR',
+        link: '#now',
         bottom: '↓',
       },
       {
         img: '/img/image--36.jpg',
         text: 'DANS <br>LE MONDE',
-        link: '#world',
+        link: '#now',
         bottom: '↓',
       },
       {
@@ -110,16 +111,19 @@ export const expositions = [
       {
         img: '/img/image--3.jpg',
         text: '2020',
+        link: '/archives',
         title: 'Archives',
       },
       {
         img: '/img/image--4.jpg',
         text: '2019',
+        link: '/archives',
         title: 'Archives',
       },
       {
         img: '/img/image--5.jpg',
         text: '2018',
+        link: '/archives',
         title: 'Archives',
       },
       {
