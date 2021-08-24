@@ -7,7 +7,7 @@ div
         h2 NOUS SOUTENIR
 
     ul.infos__links
-      h5 Programmes de membership
+      h5.active Programmes de membership
       h5 Institutions partenaires
       h5 Partenaires
     .infos__row

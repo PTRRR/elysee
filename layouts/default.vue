@@ -179,7 +179,7 @@ img.half-width {
   margin-bottom: 1em;
   background-color: #333;
 
-  h3 {
+  h2 {
     color: white;
     height: inherit;
   }
@@ -293,7 +293,8 @@ input {
       margin-right: 1em;
     }
     h5.active {
-      border-bottom: solid 0.25em black;
+      // border-bottom: solid 0.25em black;
+      color: #666;
     }
   }
 
@@ -410,7 +411,7 @@ input {
   z-index: 1000;
   background: black;
   color: white;
-  font-size: $headlines-medium;
+  font-size: $headlines-small;
   font-weight: normal;
   padding: $main-padding * 2 $main-padding * 4;
   border-radius: 100px;

@@ -15,12 +15,16 @@
           input.button-large(type="submit" name="year" placeholder="Email")
           br
           br
+    grid.expositions.pt-0(
+      :items="magazinefooter"
+    )
 
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import { magazine } from '@/static/content/magazine'
+import { magazinefooter } from '@/static/content/magazinefooter'
 import { dossier } from '@/static/content/dossier'
 
 import Grid from '@/components/Grid.vue'
@@ -31,6 +35,7 @@ export default Vue.extend({
   data() {
     return {
       magazine,
+      magazinefooter,
       dossier,
     }
   },

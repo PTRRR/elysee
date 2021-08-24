@@ -138,15 +138,12 @@ div
         span RESSOURCES
 
       .infos__content
-        span
-          a
-            h5 Textes de salle
-        span
-          a
-            h5 Brochures
-        span
-          a
-            h5 Applications d’aide à la visite
+        div
+          a Textes de salle
+        div
+          a Brochures
+        div
+          a Applications d’aide à la visite
 
     .infos__row
       h3.infos__title
@@ -158,35 +155,39 @@ div
 
     .infos__row
       h3.infos__title
-        span CATALOGUE
+        span Partenaires
 
       .infos__content
         h5 PARTENAIRES PRINCIPAUX
         br
-        a
-          h5 Parmigiani Fleurier
-        a
-          h5 Dr. Georg und Josi
+        div
+          a Parmigiani Fleurier
+        div
+          a Dr. Georg und Josi
 
-        br
-        br
         br
 
         .infos__row
           .infos__column
             h5 PARTENAIRES <br>CATALOGUE
             br
-            a
-              h5 Société Académique
-            a
-              h5 Vaudoise – Fondation Fern
-            a
-              h5 Moffat
+            div
+              a Société Académique
+            div
+              a Vaudoise – Fondation Fern
+            div
+              a Moffat
           .infos__column
             h5 MEDIAS
             br
             a
-              h5 Fisheye
+              span Fisheye
+    .infos__row
+      h3.infos__title
+        span Vues de l'exposition
+      grid.expositions(
+        :items="expositionDetail"
+      )
 
     .infos__row
       h3.infos__title
@@ -196,22 +197,26 @@ div
         p Vous pouvez préparer la visite pour votre groupe grace à ces documents
         .button-large.button Télécharger le PDF
 
+
+
     .infos__row
       h3.infos__title
         span AUTOUR DE L'EXPOSITION
-    grid.expositions(
-      :items="around"
-    )
+  grid.expositions(
+    :items="around"
+  )
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import { around } from '@/static/content/around'
+import { expositionDetail } from '@/static/content/expositionDetail'
 
 export default Vue.extend({
   data() {
     return {
       around,
+      expositionDetail,
       swiperOptions: {
         slidesPerView: 'auto',
         freeMode: true,

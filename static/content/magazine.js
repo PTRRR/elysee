@@ -11,17 +11,15 @@ export const magazine = [
       {
         img: 'img/image--12.jpg',
         text: '<br>Titre <br><img class="symbol" src="img/play-white.png"/>',
-        title: 'Podcast audio',
+        title: 'Podcast',
       },
       {
-        text: '<select name="filter" class="dropdown"><option>Découvrir ↓</option><option>Actualités</option><option>Podcasts</option></select>',
-        backgroundColor: 'hsl(326, 54%, 85%)',
-        color: 'black',
-        type: 'dropdown',
+        img: 'img/image--32.jpg',
+        text: '<br>Titre <br><img class="symbol" src="img/play-white.png"/>',
+        title: 'Podcast',
       },
     ],
   },
-
   {
     type: 'row',
     blocks: [
