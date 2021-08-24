@@ -3,7 +3,16 @@ div
   .infos
     img.infos__image(src='~static/img/image--31.jpg')
     .infos__row
-      h2.infos__title MAGAZINE
+      .infos__title
+        h2 Archive
+        br
+        br
+        .button-large.button
+            span Voir le magazine
+            .icon →
+        br
+        br
+
       .infos__content
         .filter.active Tous
         .filter Actualités
@@ -13,6 +22,9 @@ div
         .filter Expositions
         .filter Podcast
         .filter Prix Elysée
+        br
+        br
+
 
 
     .infos__row

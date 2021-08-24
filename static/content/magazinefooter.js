@@ -51,6 +51,7 @@ export const magazinefooter = [
         text: 'Continuer<br> la lecture →',
         backgroundColor: 'hsl(326, 54%, 85%)',
         color: 'black',
+        link: 'magazine/archive',
         type: 'dropdown',
       },
     ],
