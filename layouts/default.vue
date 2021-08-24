@@ -164,7 +164,7 @@ img.half-width {
 
 .button-large {
   display: inline-block;
-  font-size: $desktop-font-size;
+  font-size: $headlines-xsmall;
   padding: $main-padding * 3;
 }
 

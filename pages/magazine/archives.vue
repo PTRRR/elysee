@@ -22,6 +22,7 @@ div
         .filter Expositions
         .filter Podcast
         .filter Prix Elysée
+        .filter Dossier
         br
         br
 
