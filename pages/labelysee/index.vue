@@ -42,10 +42,10 @@ div
       .infos__row
         h3.infos__title CONTACTS
         .infos__content
-        nuxt-link(
-          to="#"
-        )
-          p labelysee@elysee.ch
+          nuxt-link(
+            to="#"
+          )
+            p labelysee@elysee.ch
 
 </template>
 
