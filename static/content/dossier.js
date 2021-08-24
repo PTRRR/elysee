@@ -12,7 +12,7 @@ export const dossier = [
         type: 'sticky',
         backgroundColor: 'hsl(326, 54%, 85%)',
         color: 'black',
-        text: '<h3>Dossier thémathique</h3>',
+        text: '<h3>Dossier thémathique</h3> <span class="content"><a href="/dossiers">Voir le dossier</a></span>',
         refTarget: 'now',
       },
       {
