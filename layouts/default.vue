@@ -200,7 +200,7 @@ input {
   -webkit-appearance: none;
   border: 1px solid #000;
   font-size: $headlines-xsmall;
-  padding: $main-padding * 3;
+  padding: $main-padding * 2.5;
   border-radius: 0;
   font-family: PhotoC;
   background: white;

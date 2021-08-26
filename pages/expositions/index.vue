@@ -10,8 +10,6 @@ div
         .infos__content
           p Le Musée de l’Elysée détient une collection unique couvrant toute l’histoire de l’art photographique et ses aspects les plus divers.
           br
-          br
-          br
     .map
       .button-large.dark.button Exposition en cours
         .icon ↓
