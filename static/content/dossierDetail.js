@@ -76,7 +76,7 @@ export const dossierDetail = [
         text: "Voir d'autres<br> dossiers →",
         backgroundColor: 'hsl(326, 54%, 85%)',
         color: 'black',
-        link: 'magazine/archives',
+        link: '/dossiers/',
         type: 'dropdown',
       },
     ],
