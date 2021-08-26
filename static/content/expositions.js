@@ -111,36 +111,26 @@ export const expositions = [
       {
         img: '/img/image--3.jpg',
         text: '2020',
-        link: '/archives',
+        link: '/archivesexpositions',
         title: 'Archives',
       },
       {
         img: '/img/image--4.jpg',
         text: '2019',
-        link: '/archives',
+        link: '/archivesexpositions',
         title: 'Archives',
       },
       {
         img: '/img/image--5.jpg',
         text: '2018',
-        link: '/archives',
+        link: '/archivesexpositions',
         title: 'Archives',
       },
       {
         text: 'VOIR<br>LES ARCHIVES',
         backgroundColor: '#B6E7DA',
-        link: '/archives',
+        link: '/archivesexpositions',
         color: 'black',
-      },
-    ],
-  },
-  {
-    type: 'row',
-    blocks: [
-      {
-        backgroundColor: '#1B181A',
-        refTarget: 'world',
-        img: '/img/map.png',
       },
     ],
   },

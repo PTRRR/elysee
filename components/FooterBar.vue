@@ -44,6 +44,8 @@ footer.footer-bar
 
 
 	span
+		h5 Nous suivre
+		br
 		img(
 			src="~static/icons/social-media-facebook_white.png"
 		)
@@ -106,7 +108,7 @@ export default Vue.extend({})
   .logo-partner {
     margin-top: 2rem;
     img {
-      width: 7rem;
+      max-width: 50%;
       float: left;
     }
   }
