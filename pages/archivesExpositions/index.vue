@@ -8,7 +8,8 @@ div
 
 
       .infos__content
-        .filter.active 2021 ↓
+        .button-large.button 2021
+          .icon ↓
         br
         br
 
