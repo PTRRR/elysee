@@ -264,9 +264,9 @@ export default Vue.extend({
   }
 }
 
-.menu-top-bar br {
-  display: block !important;
-}
+// .menu-top-bar br {
+//   display: block !important;
+// }
 
 .exposition {
   //padding: 2 * $small-font-size $main-padding * 2;
