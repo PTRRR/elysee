@@ -4,7 +4,7 @@ div
     img.infos__image(src='~static/img/image--31.jpg')
     .infos__row
       .infos__title
-        h2 Archive
+        h2 Archives
         br
         br
         .button-large.button

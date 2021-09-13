@@ -59,7 +59,7 @@ div
       .swiper-button-prev
       .swiper-button-next
 
-    .infos__row
+    .infos__row.container-test
       .infos__title
         h2 UN MAGNIFIQUE <br> CADEAU POUR LA<br> PHOTOGRAPHIE
 
@@ -86,117 +86,125 @@ div
           .icon +
 
     .infos__row
-      span.infos__title
-        img(
-          src="~static/img/image--0.jpg"
-  				class="half-width"
+      .container-test
+        span.infos__title
+          img(
+            src="~static/img/image--0.jpg"
+    				class="half-width"
+          )
+
+        .infos__content
+          h5 Marmarita, Reef Homs, 11 septembre 2013 © Matthias Bruggmann
+          p Press Images. Courtesy Musée de l’Elysée, Lausanne et Galerie Polaris, Paris
+          .button-large.button Voir le détail
+
+    //- .infos__row.dropdown
+    //-   .container-test
+    //-     h3.infos__title INFORMATIONS PRATIQUES
+    //-     h3.infos__title.symbol ↓
+
+    .infos__row
+      .container-test
+        h3.infos__title
+          span VIDEOS
+
+        .infos__content
+          .player(style='background-image:url(/public/static/img/image--1.jpg)')
+            h2.absolute-center PLAY
+          h5 Titre vidéo
+          p Description vidéo
+
+    .infos__row
+      .container-test
+        h3.infos__title
+          span PODCASTS
+
+        .infos__content
+          .podcast
+            .podcast-player
+              img(
+                src="~static/img/play.png"
+              )
+            .podcast-info
+              h5 Titre du podcast
+              p.no-margin Description
+          .podcast
+            .podcast-player
+              img(
+                src="~static/img/play.png"
+              )
+            .podcast-info
+              h5 Titre du podcast
+              p.no-margin Description
+
+    .infos__row
+      .container-test
+        h3.infos__title
+          span RESSOURCES
+
+        .infos__content
+          div
+            a Textes de salle
+          div
+            a Brochures
+          div
+            a Applications d’aide à la visite
+
+    .infos__row
+      .container-test
+        h3.infos__title
+          span CATALOGUE
+
+        .infos__content
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a tellus tempor
+            .button-large.button Voir la boutique
+
+    .infos__row
+      .container-test
+        h3.infos__title
+          span Partenaires
+
+        .infos__content
+          h5 PARTENAIRES PRINCIPAUX
+          br
+          div
+            a Parmigiani Fleurier
+          div
+            a Dr. Georg und Josi
+
+          br
+
+          .infos__row
+            .infos__column
+              h5 PARTENAIRES <br>CATALOGUE
+              br
+              div
+                a Société Académique
+              div
+                a Vaudoise – Fondation Fern
+              div
+                a Moffat
+            .infos__column
+              h5 MEDIAS
+              br
+              a
+                span Fisheye
+    .infos__row
+      .container-test
+        h3.infos__title
+          span Vues de l'exposition
+        grid.expositions(
+          :items="expositionDetail"
         )
 
-      .infos__content
-        h5 Marmarita, Reef Homs, 11 septembre 2013 © Matthias Bruggmann
-        p Press Images. Courtesy Musée de l’Elysée, Lausanne et Galerie Polaris, Paris
-        .button-large.button Voir le détail
-
-    .infos__row.dropdown
-      h3.infos__title INFORMATIONS PRATIQUES
-      h3.infos__title.symbol ↓
-
     .infos__row
-      h3.infos__title
-        span VIDEOS
+      .container-test
+        h3.infos__title
+          span CONTENU POUR <br> LES MÉDIATEURS
 
-      .infos__content
-        .player(style='background-image:url(/public/static/img/image--1.jpg)')
-          h2.absolute-center PLAY
-        h5 Titre vidéo
-        p Description vidéo
-
-    .infos__row
-      h3.infos__title
-        span PODCASTS
-
-      .infos__content
-        .podcast
-          .podcast-player
-            img(
-              src="~static/img/play.png"
-            )
-          .podcast-info
-            h5 Titre du podcast
-            p.no-margin Description
-        .podcast
-          .podcast-player
-            img(
-              src="~static/img/play.png"
-            )
-          .podcast-info
-            h5 Titre du podcast
-            p.no-margin Description
-
-    .infos__row
-      h3.infos__title
-        span RESSOURCES
-
-      .infos__content
-        div
-          a Textes de salle
-        div
-          a Brochures
-        div
-          a Applications d’aide à la visite
-
-    .infos__row
-      h3.infos__title
-        span CATALOGUE
-
-      .infos__content
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a tellus tempor
-          .button-large.button Voir la boutique
-
-    .infos__row
-      h3.infos__title
-        span Partenaires
-
-      .infos__content
-        h5 PARTENAIRES PRINCIPAUX
-        br
-        div
-          a Parmigiani Fleurier
-        div
-          a Dr. Georg und Josi
-
-        br
-
-        .infos__row
-          .infos__column
-            h5 PARTENAIRES <br>CATALOGUE
-            br
-            div
-              a Société Académique
-            div
-              a Vaudoise – Fondation Fern
-            div
-              a Moffat
-          .infos__column
-            h5 MEDIAS
-            br
-            a
-              span Fisheye
-    .infos__row
-      h3.infos__title
-        span Vues de l'exposition
-      grid.expositions(
-        :items="expositionDetail"
-      )
-
-    .infos__row
-      h3.infos__title
-        span CONTENU POUR <br> LES MÉDIATEURS
-
-      .infos__content
-        p Vous pouvez préparer la visite pour votre groupe grace à ces documents
-        .button-large.button Télécharger le PDF
-
+        .infos__content
+          p Vous pouvez préparer la visite pour votre groupe grace à ces documents
+          .button-large.button Télécharger le PDF
 
 
     .infos__row
@@ -245,6 +253,21 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+@media screen and (min-width: 1440px) {
+  .container-test {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .infos__row .container-test > * {
+    width: 50%;
+  }
+}
+
+.menu-top-bar br {
+  display: block !important;
+}
+
 .exposition {
   //padding: 2 * $small-font-size $main-padding * 2;
   //padding: calc(#{$desktop-menu-top-bar-height} - #{$main-padding}) $main-padding * 2;

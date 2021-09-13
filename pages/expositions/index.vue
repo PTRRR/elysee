@@ -3,7 +3,7 @@ div
   grid.expositions(
     :items="expositions"
   )
-  .infos.pt-0
+  .infos.pst-0
     .infos__content
       .infos__row
         h2.infos__title Le Musée de l'Elysée <br>dans le monde
